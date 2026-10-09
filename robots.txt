@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gardenai0222-a11y.github.io/VANDORA/sitemap.xml

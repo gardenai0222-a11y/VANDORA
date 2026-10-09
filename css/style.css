@@ -1,0 +1,2786 @@
+/* ==========================================================================
+   VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 頂級金融與地政鑑價專刊設計系統
+   Aesthetic: Bespoke Editorial Luxury, Oxford Slate, Champagne Brass, Swiss Typographic Precision
+   Human-Crafted Real Estate & Proptech Architecture (No Generic AI Tropes)
+   ========================================================================== */
+
+:root {
+    /* 主色調：深邃牛津岩灰、溫潤石墨黑、香檳黃銅金、純淨象牙白 */
+    --c-bg-canvas: #0A0D10;
+    --c-bg-surface: #11161B;
+    --c-bg-surface-elevated: #161D24;
+    --c-bg-surface-hover: #1C252E;
+    --c-bg-glass: rgba(17, 22, 27, 0.88);
+
+    --c-brass-gold: #C5A059;
+    --c-brass-light: #DFC07A;
+    --c-brass-dark: #8F6E2B;
+    --c-brass-muted: rgba(197, 160, 89, 0.12);
+    --c-brass-border: rgba(197, 160, 89, 0.3);
+
+    --c-emerald: #10B981;
+    --c-emerald-muted: rgba(16, 185, 129, 0.12);
+    --c-rose: #F43F5E;
+    --c-rose-muted: rgba(244, 63, 94, 0.12);
+    --c-amber: #F59E0B;
+
+    --c-border-hairline: rgba(255, 255, 255, 0.08);
+    --c-border-subtle: #222B35;
+    --c-border-focus: #C5A059;
+
+    --c-text-headline: #FFFFFF;
+    --c-text-body: #E2E8F0;
+    --c-text-muted: #94A3B8;
+    --c-text-dim: #64748B;
+
+    --font-serif: 'Noto Serif TC', 'Cinzel', Georgia, serif;
+    --font-sans: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-display: 'Cinzel', 'Noto Serif TC', serif;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-full: 9999px;
+
+    --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.4);
+    --shadow-elevated: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.1);
+    --shadow-gold: 0 8px 25px rgba(197, 160, 89, 0.18);
+    --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+
+    --transition-smooth: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--c-bg-canvas);
+    color: var(--c-text-body);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   頂級英倫雙層典雅導覽列 (Precision Navbar)
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--c-bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--c-border-hairline);
+    transition: var(--transition-smooth);
+}
+
+.nav-container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.brand-logo-img {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(197, 160, 89, 0.35));
+    transition: var(--transition-smooth);
+}
+
+.brand-wrapper:hover .brand-logo-img {
+    transform: scale(1.05);
+}
+
+/* Canonical Brand Header Typography (100% Identical Across All Pages) */
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.brand-logo-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(197, 160, 89, 0.35));
+    transition: var(--transition-smooth);
+    display: block;
+}
+
+.brand-wrapper:hover .brand-logo-img {
+    transform: scale(1.04);
+}
+
+.brand-titles {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.brand-name {
+    font-family: 'Cinzel', 'Noto Serif TC', serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+    line-height: 1.15;
+    white-space: nowrap;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.brand-sub {
+    font-size: 0.72rem;
+    color: var(--c-brass-gold);
+    letter-spacing: 1px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.2;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+.nav-menu a {
+    color: var(--c-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    white-space: nowrap;
+    padding: 8px 14px;
+    border-radius: var(--radius-xs);
+    border: 1px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #FFFFFF;
+    background: rgba(223, 192, 122, 0.08);
+    border: 1px solid rgba(223, 192, 122, 0.3);
+}
+
+.btn-gold-action {
+    background: linear-gradient(135deg, #C5A059 0%, #A88134 100%);
+    color: #0A0D10 !important;
+    padding: 8px 18px !important;
+    border-radius: var(--radius-xs) !important;
+    font-weight: 800 !important;
+    font-size: 0.88rem !important;
+    box-shadow: var(--shadow-gold);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-gold-action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.35);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.3rem;
+    color: var(--c-brass-light);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 頂級金融與地政鑑價專刊設計系統
+   ========================================================================== */
+.hero-editorial {
+    padding: 56px 0 36px;
+    background: radial-gradient(circle at 50% 10%, rgba(30, 40, 50, 0.5) 0%, rgba(10, 13, 16, 0.95) 75%);
+    border-bottom: 1px solid var(--c-border-hairline);
+    text-align: center;
+    position: relative;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    background: var(--c-brass-muted);
+    border: 1px solid var(--c-brass-border);
+    border-radius: var(--radius-full);
+    color: var(--c-brass-light);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+}
+
+.hero-headline {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+}
+
+.hero-headline span {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--c-brass-light) 50%, var(--c-brass-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subhead {
+    font-size: 1.02rem;
+    color: var(--c-text-muted);
+    max-width: 840px;
+    margin: 0 auto 36px;
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   精緻分段式情境切換導覽 (Segmented Scenario Pills)
+   ========================================================================== */
+.scenario-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px;
+    background: var(--c-bg-surface);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-md);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.scenario-pill {
+    background: transparent;
+    color: var(--c-text-muted);
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: var(--radius-xs);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.scenario-pill:hover {
+    color: #FFFFFF;
+    background: var(--c-bg-surface-elevated);
+    border: 1px solid var(--c-border-subtle);
+}
+
+.scenario-pill.active {
+    background: linear-gradient(135deg, #1E2730 0%, #161D24 100%);
+    color: var(--c-brass-light);
+    border: 1px solid var(--c-brass-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   實價登錄動態行情儀表看板 (Live Market Stats Banner)
+   ========================================================================== */
+.district-badge-bar {
+    background: linear-gradient(135deg, #131A21 0%, #0F141A 100%);
+    border: 1px solid var(--c-border-subtle);
+    border-left: 4px solid var(--c-brass-gold);
+    border-radius: var(--radius-sm);
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.district-badge-bar .badge-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 8px;
+}
+
+.district-badge-bar .badge-tag {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border-hairline);
+    padding: 5px 12px;
+    border-radius: var(--radius-xs);
+    font-size: 0.84rem;
+    color: var(--c-text-muted);
+}
+
+.district-badge-bar .badge-tag strong {
+    color: var(--c-brass-light);
+    font-family: var(--font-mono);
+    margin-left: 4px;
+    font-size: 0.9rem;
+}
+
+/* 歷史走勢圖切換按鈕 */
+.btn-timeframe {
+    background: transparent;
+    border: none;
+    color: var(--c-text-muted);
+    padding: 6px 14px;
+    border-radius: var(--radius-xs);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-timeframe:hover {
+    color: #FFFFFF;
+    background: var(--c-bg-surface-hover);
+}
+
+.btn-timeframe.active {
+    background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%);
+    color: #0A0D10;
+    box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+}
+
+/* ==========================================================================
+   主工作台雙欄格局 (Workbench Two-Column Grid)
+   ========================================================================== */
+.workbench-module {
+    margin: 32px 0 60px;
+}
+
+.workbench-grid,
+.calc-grid-2col {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(440px, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+@media (max-width: 1100px) {
+    .workbench-grid,
+    .calc-grid-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .workbench-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 左欄：參數設定儀表板 (Console / Params Card) */
+.params-card {
+    background: var(--c-bg-surface);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    box-shadow: var(--shadow-elevated);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--c-border-hairline);
+}
+
+.caption-title {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.caption-badge {
+    font-size: 0.74rem;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: var(--c-brass-muted);
+    border: 1px solid var(--c-brass-border);
+    color: var(--c-brass-light);
+    font-weight: 600;
+}
+
+/* 表單元件精緻化 */
+.form-field {
+    margin-bottom: 18px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.field-label {
+    display: block;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--c-text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.field-tip {
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: var(--c-text-dim);
+    margin-left: 6px;
+}
+
+.input-styled,
+.select-styled {
+    width: 100%;
+    background: var(--c-bg-canvas);
+    border: 1px solid var(--c-border-subtle);
+    color: #FFFFFF;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-family: var(--font-sans);
+    transition: var(--transition-smooth);
+    outline: none;
+}
+
+.input-styled:focus,
+.select-styled:focus {
+    border-color: var(--c-border-focus);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    background: var(--c-bg-surface-elevated);
+}
+
+.select-styled {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* 專業生活機能與加減分條件矩陣 (Clean Feature Matrix) */
+.deduction-checklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    background: var(--c-bg-canvas);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--c-text-body);
+    padding: 8px 10px;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    line-height: 1.45;
+}
+
+.check-item:hover {
+    background: var(--c-bg-surface-elevated);
+}
+
+.check-item input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--c-brass-gold);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   右欄：正式鑑價評估水單 (Valuation Certificate & Statement)
+   ========================================================================== */
+.statement-card {
+    background: linear-gradient(180deg, #141B22 0%, #10151B 100%);
+    border: 1px solid var(--c-brass-border);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-elevated);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 86px;
+    overflow: hidden;
+}
+
+.statement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle at 100% 0%, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.watermark-header {
+    border-bottom: 1px solid var(--c-border-hairline);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.watermark-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.watermark-date {
+    font-size: 0.78rem;
+    color: var(--c-brass-gold);
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+/* 核心總價大標 (Hero Stat Box) */
+.big-stat-block {
+    background: var(--c-bg-canvas);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-inset);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-val-huge {
+    font-family: var(--font-serif);
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--c-brass-light);
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.addr-quick-jump-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(197, 160, 89, 0.12);
+    border: 1px solid rgba(197, 160, 89, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.addr-quick-jump-pill:hover {
+    background: rgba(197, 160, 89, 0.22);
+    border-color: #DFC07A;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.2);
+}
+
+.jump-action-tip {
+    font-size: 0.78rem;
+    color: #DFC07A;
+    background: rgba(10, 13, 16, 0.6);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+/* 水單分項明細表 (Ledger Table) */
+.statement-ledger {
+    margin-bottom: 22px;
+}
+
+
+.ledger-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    font-size: 0.9rem;
+    gap: 16px;
+}
+
+.ledger-row:last-child {
+    border-bottom: none;
+}
+
+.ledger-row .label {
+    color: var(--c-text-muted);
+    font-weight: 500;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.ledger-row .value {
+    font-weight: 700;
+    color: #FFFFFF;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+    font-family: var(--font-mono);
+}
+
+
+/* 操作按鈕 (Refined Action Buttons) */
+.btn-export-excel {
+    width: 100%;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.btn-export-excel:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-print-statement {
+    width: 100%;
+    background: var(--c-bg-surface-elevated);
+    color: var(--c-text-body);
+    border: 1px solid var(--c-border-subtle);
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-print-statement:hover {
+    background: var(--c-bg-surface-hover);
+    color: #FFFFFF;
+    border-color: var(--c-text-muted);
+}
+
+/* ==========================================================================
+   代書實務筆記 (Expert Notes Grid)
+   ========================================================================== */
+.advisor-notes {
+    background: var(--c-bg-surface);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    margin: 40px 0 60px;
+}
+
+.advisor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.advisor-box {
+    background: var(--c-bg-canvas);
+    border: 1px solid var(--c-border-hairline);
+    border-left: 3px solid var(--c-brass-gold);
+    border-radius: var(--radius-xs);
+    padding: 22px 24px;
+}
+
+.advisor-box h5 {
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: var(--font-serif);
+    letter-spacing: 0.3px;
+}
+
+.advisor-box p {
+    font-size: 0.88rem;
+    color: var(--c-text-muted);
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Address Specific Transaction History Table (實價2.0門牌真實成交明細表)
+   ========================================================================== */
+.address-history-card {
+    background: var(--c-bg-card);
+    border: 1px solid var(--c-border-card);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.address-history-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 14px;
+}
+
+.address-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+}
+
+.address-history-table th {
+    background: var(--c-bg-canvas);
+    color: var(--c-brass-light);
+    font-weight: 700;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--c-border-subtle);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.address-history-table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--c-border-hairline);
+    color: var(--c-text-main);
+    vertical-align: middle;
+}
+
+.address-history-table tr:hover td {
+    background: rgba(197, 160, 89, 0.04);
+}
+
+.addr-tag-pill {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.addr-tag-main {
+    background: rgba(197, 160, 89, 0.18);
+    color: #DFC07A;
+    border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.addr-tag-near {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34D399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.addr-tag-history {
+    background: rgba(148, 163, 184, 0.12);
+    color: #94A3B8;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* ==========================================================================
+   頁尾 (Footer)
+   ========================================================================== */
+.site-footer {
+    border-top: 1px solid var(--c-border-hairline);
+    background: #07090C;
+    padding: 40px 0 32px;
+    text-align: center;
+    color: var(--c-text-dim);
+    font-size: 0.85rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--c-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.footer-nav a:hover {
+    color: var(--c-brass-light);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--c-bg-surface);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--c-border-subtle);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
+   買屋獲利 ＆ 現金流精算盤：頂級人性化互動元件 (Luxury ROI Interactive Suite)
+   ========================================================================== */
+
+/* 情境一鍵預設卡片群組 (Scenario Presets) */
+.scenario-preset-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-scenario-preset {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #94A3B8;
+}
+
+.btn-scenario-preset:hover {
+    background: rgba(197, 160, 89, 0.08);
+    border-color: var(--c-brass-light);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+.btn-scenario-preset.active {
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.15) 0%, rgba(158, 125, 53, 0.25) 100%);
+    border-color: #DFC07A;
+    color: #DFC07A;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.preset-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    display: block;
+    color: #FFFFFF;
+}
+
+.btn-scenario-preset.active .preset-title {
+    color: #DFC07A;
+}
+
+.preset-subtitle {
+    font-size: 0.72rem;
+    color: var(--c-text-muted);
+    display: block;
+    margin-top: 4px;
+}
+
+/* 雙向連動滑桿與步進輸入元件 (Sliders & Steppers) */
+.slider-control-box {
+    margin-top: 8px;
+}
+
+.slider-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.stepper-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-xs);
+    background: var(--c-bg-surface-elevated);
+    border: 1px solid var(--c-border-subtle);
+    color: #CBD5E1;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.stepper-btn:hover {
+    background: var(--c-brass-muted);
+    border-color: var(--c-brass-border);
+    color: var(--c-brass-light);
+}
+
+.range-slider-styled {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #1E293B;
+    outline: none;
+    cursor: pointer;
+    margin: 8px 0 4px;
+}
+
+.range-slider-styled::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #DFC07A 0%, #C5A059 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(197, 160, 89, 0.25);
+    transition: transform 0.15s ease;
+}
+
+.range-slider-styled::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.quick-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.quick-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-pill:hover,
+.quick-pill.active {
+    background: rgba(197, 160, 89, 0.15);
+    border-color: #DFC07A;
+    color: #DFC07A;
+}
+
+/* 現金流健康指標儀表卡 (Cash Flow Health Indicator) */
+.cashflow-health-card {
+    background: rgba(10, 13, 16, 0.7);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.health-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 10px;
+}
+
+.health-status-green {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34D399;
+    border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+.health-status-gold {
+    background: rgba(223, 192, 122, 0.15);
+    color: #DFC07A;
+    border: 1px solid rgba(223, 192, 122, 0.35);
+}
+
+.health-status-blue {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60A5FA;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #1E293B;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+/* 獲利階梯瀑布流 (Profit Waterfall Steps) */
+.waterfall-step-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.waterfall-step-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.waterfall-step-row.plus {
+    border-left: 3px solid #34D399;
+}
+
+.waterfall-step-row.minus {
+    border-left: 3px solid #F43F5E;
+}
+
+.waterfall-step-row.total {
+    background: rgba(197, 160, 89, 0.12);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    font-weight: 800;
+}
+
+/* 投資效益天秤對比卡 (Asset Comparison Matrix) */
+.roi-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.roi-compare-box {
+    background: rgba(10, 13, 16, 0.6);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.roi-compare-box.active-winner {
+    border-color: #DFC07A;
+    background: rgba(197, 160, 89, 0.08);
+}
+
+/* ==========================================================================
+   地政稅務 ＆ 買賣置產專業 QA 智庫問答專區 (Professional FAQ Knowledge Base)
+   ========================================================================== */
+.faq-section {
+    margin: 48px 0 60px;
+    background: var(--c-bg-surface);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-elevated);
+}
+
+.faq-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--c-border-hairline);
+}
+
+.faq-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-faq-filter {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--c-border-subtle);
+    color: #94A3B8;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-faq-filter:hover {
+    background: rgba(197, 160, 89, 0.1);
+    color: #FFFFFF;
+    border-color: var(--c-brass-light);
+}
+
+.btn-faq-filter.active {
+    background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%);
+    color: #0A0D10;
+    border-color: #C5A059;
+    box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
+}
+
+.faq-search-input {
+    width: 100%;
+    max-width: 360px;
+    background: var(--c-bg-canvas);
+    border: 1px solid var(--c-border-subtle);
+    color: #FFFFFF;
+    padding: 8px 14px 8px 36px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.faq-search-input:focus {
+    border-color: var(--c-brass-light);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-accordion-item {
+    background: rgba(10, 13, 16, 0.6);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.faq-accordion-item:hover {
+    border-color: rgba(197, 160, 89, 0.4);
+}
+
+.faq-accordion-item.active {
+    border-color: #C5A059;
+    background: rgba(17, 22, 27, 0.9);
+}
+
+.faq-question-btn {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.faq-question-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.faq-q-badge {
+    background: var(--c-brass-muted);
+    border: 1px solid var(--c-brass-border);
+    color: var(--c-brass-light);
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+}
+
+.faq-icon-arrow {
+    font-size: 0.85rem;
+    color: var(--c-brass-light);
+    transition: transform 0.25s ease;
+}
+
+.faq-accordion-item.active .faq-icon-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer-body {
+    display: none;
+    padding: 0 20px 18px 52px;
+    color: #CBD5E1;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    margin-top: 4px;
+}
+
+.faq-accordion-item.active .faq-answer-body {
+    display: block;
+}
+
+.faq-law-tag {
+    display: inline-block;
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60A5FA;
+    font-size: 0.72rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   Cookie 告知橫幅 ＆ 隱私權政策彈窗 (Cookie Consent & Privacy Modal)
+   ========================================================================== */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 980px;
+    background: rgba(14, 23, 38, 0.96);
+    border: 1px solid var(--c-brass-border);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 16px 24px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    animation: slideUpCookie 0.4s ease-out;
+}
+
+@keyframes slideUpCookie {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.cookie-consent-text {
+    font-size: 0.86rem;
+    color: #CBD5E1;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.btn-cookie-accept {
+    background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%);
+    color: #0A0D10;
+    font-weight: 800;
+    font-size: 0.84rem;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cookie-accept:hover {
+    box-shadow: 0 0 12px rgba(197, 160, 89, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-cookie-privacy {
+    background: transparent;
+    color: #94A3B8;
+    font-size: 0.82rem;
+    border: 1px solid var(--c-border-subtle);
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cookie-privacy:hover {
+    color: #FFFFFF;
+    border-color: #CBD5E1;
+}
+
+/* 隱私權彈窗專屬內部樣式 */
+.privacy-body-scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+    text-align: left;
+    color: #CBD5E1;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    padding-right: 12px;
+    margin: 18px 0 24px;
+}
+
+.privacy-body-scroll h4 {
+    color: #DFC07A;
+    font-size: 0.95rem;
+    margin: 14px 0 6px;
+    font-weight: 700;
+}
+
+.privacy-body-scroll p {
+    margin-bottom: 8px;
+}
+
+.privacy-body-scroll ul {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .cookie-consent-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        bottom: 12px;
+        padding: 14px 18px;
+    }
+    .cookie-consent-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   全新頂級白話文 ＆ 3 階財務水單視覺化樣式 (Ultra-Readable Financial UI)
+   ========================================================================== */
+.roi-hero-trio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.roi-trio-card {
+    background: linear-gradient(135deg, #161D24 0%, #10151B 100%);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.roi-trio-card.primary {
+    border-color: rgba(52, 211, 153, 0.4);
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, #10151B 100%);
+}
+
+.roi-trio-card.gold {
+    border-color: var(--c-brass-border);
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, #10151B 100%);
+}
+
+.roi-trio-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--c-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.roi-trio-val {
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.roi-trio-sub {
+    font-size: 0.7rem;
+    color: var(--c-text-dim);
+    margin-top: 3px;
+}
+
+/* 專家白話結論解讀卡 */
+.executive-summary-card {
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.08) 0%, rgba(14, 23, 38, 0.6) 100%);
+    border: 1px solid var(--c-brass-border);
+    border-left: 4px solid #DFC07A;
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: 0.88rem;
+    color: #E2E8F0;
+}
+
+.executive-summary-title {
+    font-weight: 800;
+    color: #DFC07A;
+    font-size: 0.86rem;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 3 階段清晰資金進出流 (Phase Flow) */
+.money-phase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.money-phase-row {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-xs);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    gap: 12px;
+}
+
+.money-phase-row.phase-total {
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.15) 0%, rgba(16, 21, 27, 0.9) 100%);
+    border-color: var(--c-brass-border);
+}
+
+.phase-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.phase-tag.p1 { background: rgba(96, 165, 250, 0.15); color: #60A5FA; border: 1px solid rgba(96, 165, 250, 0.3); }
+.phase-tag.p2 { background: rgba(52, 211, 153, 0.15); color: #34D399; border: 1px solid rgba(52, 211, 153, 0.3); }
+.phase-tag.p3 { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.phase-tag.p-tot { background: rgba(223, 192, 122, 0.2); color: #DFC07A; border: 1px solid #DFC07A; }
+
+.phase-content {
+    flex: 1;
+    color: #CBD5E1;
+}
+
+.phase-val {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   最佳脫手年份獲利光譜 ＆ 三大策略 PK ＆ 同預算同級標的樣式 (Investor Empathy Suite)
+   ========================================================================== */
+.strategy-suite-section {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--c-border-subtle);
+}
+
+.strategy-suite-header {
+    margin-bottom: 20px;
+}
+
+.strategy-suite-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.strategy-suite-sub {
+    font-size: 0.84rem;
+    color: var(--c-text-muted);
+    margin-top: 4px;
+}
+
+/* 1. 獲利光譜橫向卡片滾動區 (Sweetspot Matrix) */
+.sweetspot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.sweetspot-card {
+    background: linear-gradient(135deg, #161D24 0%, #10151B 100%);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 14px 12px;
+    text-align: center;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.sweetspot-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--c-border-medium);
+}
+
+.sweetspot-card.winner {
+    border: 2px solid #DFC07A;
+    background: linear-gradient(135deg, rgba(223, 192, 122, 0.12) 0%, #161D24 100%);
+    box-shadow: 0 4px 20px rgba(223, 192, 122, 0.15);
+}
+
+.sweetspot-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.sweetspot-badge.gold {
+    background: #DFC07A;
+    color: #0E1726;
+}
+
+.sweetspot-badge.blue {
+    background: rgba(96, 165, 250, 0.2);
+    color: #60A5FA;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+}
+
+.sweetspot-badge.gray {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94A3B8;
+}
+
+.sweetspot-year {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.sweetspot-tax-rate {
+    font-size: 0.74rem;
+    color: var(--c-text-muted);
+    margin-bottom: 8px;
+}
+
+.sweetspot-profit {
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.sweetspot-irr {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #DFC07A;
+    margin-bottom: 8px;
+}
+
+.sweetspot-tagline {
+    font-size: 0.72rem;
+    color: #94A3B8;
+    line-height: 1.4;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    padding-top: 6px;
+}
+
+/* 2. 三大操作策略 PK 矩陣 (Strategy PK Matrix) */
+.strategy-pk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.strategy-pk-card {
+    background: #141A22;
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+}
+
+.strategy-pk-card.recommended {
+    border-color: var(--c-brass-border);
+    background: linear-gradient(180deg, rgba(197, 160, 89, 0.08) 0%, #141A22 100%);
+}
+
+.strategy-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+.strategy-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.strategy-pill.a { background: rgba(52, 211, 153, 0.2); color: #34D399; }
+.strategy-pill.b { background: rgba(223, 192, 122, 0.2); color: #DFC07A; }
+.strategy-pill.c { background: rgba(96, 165, 250, 0.2); color: #60A5FA; }
+
+.strategy-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.strategy-desc {
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.strategy-stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.strategy-stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.84rem;
+}
+
+.strategy-stat-lbl {
+    color: var(--c-text-muted);
+}
+
+.strategy-stat-val {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.strategy-takeaway-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.78rem;
+    color: #CBD5E1;
+    line-height: 1.5;
+}
+
+/* 3. 同預算同級標的橫向 PK 智庫 (Peer Property Benchmark) */
+.peer-property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.peer-property-card {
+    background: #11171E;
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    transition: var(--transition-smooth);
+}
+
+.peer-property-card:hover {
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+.peer-type-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #60A5FA;
+    background: rgba(96, 165, 250, 0.15);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.peer-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.peer-scenario {
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.peer-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.peer-metric-item {
+    font-size: 0.76rem;
+}
+
+.peer-metric-lbl {
+    color: var(--c-text-dim);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.peer-metric-val {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    color: #DFC07A;
+}
+
+.peer-radar-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.74rem;
+    color: var(--c-text-muted);
+}
+
+.radar-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radar-bar-lbl {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.radar-bar-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.radar-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.radar-bar-score {
+    width: 28px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   AI 地段實價歷史成績 ＆ 重大建設利多加權樣式 (District Growth & Catalysts Engine)
+   ========================================================================== */
+.district-growth-card {
+    background: linear-gradient(135deg, rgba(22, 29, 36, 0.9) 0%, rgba(16, 21, 27, 0.95) 100%);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.district-growth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.district-growth-title {
+    font-size: 0.84rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.district-hist-badge {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60A5FA;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.76rem;
+    font-family: var(--font-mono);
+    font-weight: 800;
+}
+
+.catalysts-checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.catalyst-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.catalyst-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(223, 192, 122, 0.4);
+}
+
+.catalyst-item input[type="checkbox"] {
+    accent-color: #DFC07A;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.catalyst-text {
+    font-size: 0.78rem;
+    color: #CBD5E1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.catalyst-boost {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    color: #DFC07A;
+    margin-left: 4px;
+}
+
+.growth-formula-bar {
+    margin-top: 10px;
+    background: rgba(14, 23, 38, 0.6);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 兩層式主題切換藥丸 (Thematic Category Pills) */
+.scenario-category-bar .cat-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-muted);
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.scenario-category-bar .cat-pill:hover {
+    color: #FFFFFF;
+    background: var(--c-bg-surface-hover);
+    border-color: rgba(223, 192, 122, 0.4);
+}
+
+.scenario-category-bar .cat-pill.active {
+    background: linear-gradient(135deg, rgba(223, 192, 122, 0.2) 0%, rgba(197, 160, 89, 0.35) 100%);
+    border: 1.5px solid #DFC07A;
+    color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(223, 192, 122, 0.25);
+}
+
+
+/* ==========================================================================
+   經典投資情境快捷卡 (Scenario Presets & Quick Pills)
+   ========================================================================== */
+.preset-group,
+.scenario-preset-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.preset-btn,
+.btn-scenario-preset {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.preset-btn:hover,
+.btn-scenario-preset:hover {
+    background: var(--c-bg-surface-hover);
+    border-color: rgba(223, 192, 122, 0.4);
+    transform: translateY(-1px);
+}
+
+.preset-btn.active,
+.btn-scenario-preset.active {
+    background: linear-gradient(135deg, rgba(223, 192, 122, 0.15) 0%, rgba(14, 23, 38, 0.95) 100%);
+    border: 1.5px solid #DFC07A;
+    box-shadow: 0 4px 15px rgba(223, 192, 122, 0.2);
+}
+
+.preset-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.preset-btn.active .preset-title,
+.btn-scenario-preset.active .preset-title {
+    color: #DFC07A;
+}
+
+.preset-subtitle {
+    font-size: 0.72rem;
+    color: var(--c-text-muted);
+}
+
+/* 快速選填按鈕組 (Quick Pill Group) */
+.quick-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.quick-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border-hairline);
+    border-radius: var(--radius-xs);
+    padding: 4px 10px;
+    font-size: 0.76rem;
+    color: var(--c-text-muted);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.quick-pill:hover {
+    color: #FFFFFF;
+    background: rgba(223, 192, 122, 0.12);
+    border-color: #DFC07A;
+}
+
+/* 步進器與滑桿控制 (Slider Input Row) */
+.slider-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.stepper-btn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-bg-surface-elevated);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-xs);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.stepper-btn:hover {
+    background: #DFC07A;
+    color: #0A0D10;
+}
+
+.range-slider-styled {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    accent-color: #DFC07A;
+    cursor: pointer;
+}
+
+/* 三大頂部核心成果卡 (Hero Trio Cards) */
+.roi-hero-trio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.hero-stat-card {
+    background: linear-gradient(135deg, rgba(22, 29, 36, 0.9) 0%, rgba(16, 21, 27, 0.95) 100%);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 10px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.hero-stat-card .stat-lbl {
+    font-size: 0.74rem;
+    color: var(--c-text-muted);
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+}
+
+.hero-stat-card .stat-main-num {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-stat-card .stat-sub-desc {
+    font-size: 0.68rem;
+    color: var(--c-text-dim);
+    margin-top: 3px;
+}
+
+/* 專家白話結論解讀卡 */
+.executive-summary-card {
+    background: linear-gradient(135deg, rgba(223, 192, 122, 0.08) 0%, rgba(14, 23, 38, 0.7) 100%);
+    border: 1px solid rgba(223, 192, 122, 0.3);
+    border-left: 4px solid #DFC07A;
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.exec-summary-title {
+    font-weight: 800;
+    color: #DFC07A;
+    font-size: 0.86rem;
+    margin-bottom: 4px;
+}
+
+.exec-summary-text {
+    font-size: 0.88rem;
+    color: #E2E8F0;
+    line-height: 1.65;
+}
+
+/* 租金安全健康儀表 (Cashflow Gauge) */
+.cashflow-gauge-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+}
+
+.gauge-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.gauge-bar-track {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.gauge-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.gauge-labels-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+}
+
+.health-status-badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.health-status-green { background: rgba(52, 211, 153, 0.15); color: #34D399; border: 1px solid rgba(52, 211, 153, 0.3); }
+.health-status-gold { background: rgba(223, 192, 122, 0.15); color: #DFC07A; border: 1px solid rgba(223, 192, 122, 0.3); }
+.health-status-blue { background: rgba(96, 165, 250, 0.15); color: #60A5FA; border: 1px solid rgba(96, 165, 250, 0.3); }
+
+/* 三大資產年化報酬率 PK 對比 */
+.roi-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.roi-compare-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--c-border-hairline);
+    border-radius: var(--radius-xs);
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.roi-compare-box.active-winner {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(14, 23, 38, 0.8) 100%);
+    border-color: rgba(52, 211, 153, 0.4);
+}
+
+
+/* ==========================================================================
+   八大地政稅務專屬矩陣切換列 (Tax Tools Matrix Bar)
+   ========================================================================== */
+.tax-tools-matrix-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .tax-tools-matrix-bar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 860px) {
+    .tax-tools-matrix-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .tax-tools-matrix-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tax-tool-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition-smooth);
+}
+
+.tax-tool-item:hover {
+    background: var(--c-bg-surface-hover);
+    border-color: rgba(223, 192, 122, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tax-tool-item.active {
+    background: linear-gradient(135deg, rgba(223, 192, 122, 0.15) 0%, rgba(14, 23, 38, 0.95) 100%);
+    border: 1.5px solid #DFC07A;
+    box-shadow: 0 4px 18px rgba(223, 192, 122, 0.25);
+}
+
+.tax-tool-item .tool-num {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--c-text-dim);
+    padding-right: 8px;
+    border-right: 1px solid var(--c-border-hairline);
+}
+
+.tax-tool-item.active .tool-num {
+    color: #DFC07A;
+}
+
+.tax-tool-item .tool-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tax-tool-item .tool-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.tax-tool-item.active .tool-title {
+    color: #DFC07A;
+}
+
+.tax-tool-item .tool-sub {
+    font-size: 0.72rem;
+    color: var(--c-text-muted);
+}
+
+
+/* Enhanced Mobile Navigation & Drawer */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
+    .nav-container {
+        padding: 12px 16px;
+    }
+    .brand-name {
+        font-size: 1.15rem;
+        letter-spacing: 1.5px;
+    }
+    .brand-sub {
+        font-size: 0.65rem;
+    }
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--c-border-hairline);
+        cursor: pointer;
+        color: var(--c-brass-light);
+        font-size: 1.2rem;
+        z-index: 1002;
+    }
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background: rgba(10, 13, 16, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px;
+        gap: 12px;
+        z-index: 1001;
+        overflow-y: auto;
+        border-top: 1px solid var(--c-border-hairline);
+    }
+    .nav-menu.active {
+        display: flex !important;
+    }
+    .nav-menu a {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        border-radius: 8px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--c-border-subtle);
+    }
+    .nav-menu a.active {
+        background: linear-gradient(135deg, rgba(223, 192, 122, 0.2) 0%, rgba(14, 23, 38, 0.9) 100%);
+        border-color: #DFC07A;
+        color: #FFFFFF;
+    }
+    .hero-headline {
+        font-size: 1.7rem;
+        line-height: 1.3;
+    }
+    .hero-subhead {
+        font-size: 0.92rem;
+        padding: 0 8px;
+    }
+}
+
+/* ==========================================================================
+   專業報表與地政水單列印樣式 (@media print)
+   支援房仲經紀人、地政士事務所 A4 紙本列印與存為 PDF
+   ========================================================================== */
+@media print {
+    .navbar,
+    .hamburger,
+    .hero-tag,
+    .btn-gold-action,
+    .tax-tools-matrix-bar,
+    .cookie-consent-banner,
+    #privacyModal,
+    #sponsorModal,
+    .stepper-btn,
+    .range-slider-styled,
+    .quick-pill-group,
+    .preset-group,
+    button,
+    .toast,
+    .site-footer .footer-nav,
+    .ad-container {
+        display: none !important;
+    }
+
+    body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        font-family: '微軟正黑體', 'Noto Sans TC', sans-serif !important;
+        font-size: 10.5pt !important;
+        line-height: 1.5 !important;
+    }
+
+    .container, .workbench-container, main {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .hero-editorial {
+        background: transparent !important;
+        padding: 8px 0 !important;
+        border-bottom: 2px solid #0F172A !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-headline {
+        color: #0F172A !important;
+        font-size: 16pt !important;
+    }
+
+    .hero-headline span {
+        color: #9E7D35 !important;
+    }
+
+    .hero-subhead {
+        color: #475569 !important;
+        font-size: 9.5pt !important;
+    }
+
+    .card, .workbench-module, .statement-card, .params-card, .advisor-box, .trend-chart-card {
+        background: #FFFFFF !important;
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+        color: #0F172A !important;
+        page-break-inside: avoid;
+        margin-bottom: 14px !important;
+        padding: 16px !important;
+    }
+
+    .watermark-header, .panel-header {
+        background: #F1F5F9 !important;
+        border-bottom: 1px solid #CBD5E1 !important;
+        color: #0F172A !important;
+    }
+
+    .input-styled, input, select {
+        background: #F8FAFC !important;
+        border: 1px solid #CBD5E1 !important;
+        color: #0F172A !important;
+    }
+
+    .highlight-val, .badge-gold {
+        color: #9E7D35 !important;
+        font-weight: 800 !important;
+    }
+
+    .site-footer {
+        border-top: 1px solid #E2E8F0 !important;
+        background: transparent !important;
+        color: #64748B !important;
+        font-size: 8.5pt !important;
+        padding: 10px 0 !important;
+    }
+}
+
+
+
+/* ==========================================================================
+   VANDORA 旗艦升級：買賣雙方一頁式速查、Sticky 浮動摘要與名片欄位樣式
+   ========================================================================== */
+.consultant-card-bar input {
+    color: #FFFFFF;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.consultant-card-bar input:focus {
+    border-color: #DFC07A;
+    box-shadow: 0 0 8px rgba(223, 192, 122, 0.35);
+}
+.btn-save-card:hover {
+    background: rgba(197, 160, 89, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+/* 置頂/置底浮動試算速覽條 (Sticky Summary Bar) */
+.sticky-val-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 16, 22, 0.95);
+    border-top: 1.5px solid var(--c-brass-gold);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    padding: 10px 20px;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.6);
+    animation: slideUp 0.3s ease;
+}
+.sticky-val-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.sticky-val-info {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sticky-label {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+}
+.sticky-total {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #DFC07A;
+    font-family: var(--font-mono);
+}
+.sticky-unit {
+    font-size: 0.9rem;
+    color: #34D399;
+    font-weight: 700;
+}
+.sticky-val-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-sticky-line {
+    background: linear-gradient(135deg, #06C755 0%, #05a044 100%);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+.btn-sticky-line:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+.btn-sticky-top {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border: 1px solid var(--c-border-subtle);
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-sticky-top:hover {
+    background: var(--c-brass-gold);
+    color: #0A0D10;
+}
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Google AdSense 規範容器 ＆ LINE / 報表一鍵分享按鈕樣式
+   ========================================================================== */
+.ad-container-wrapper {
+    margin: 32px auto 20px;
+    padding: 16px 20px;
+    background: rgba(14, 23, 38, 0.4);
+    border: 1px dashed rgba(197, 160, 89, 0.25);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    max-width: 1140px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ad-container-wrapper:hover {
+    border-color: rgba(197, 160, 89, 0.45);
+    background: rgba(14, 23, 38, 0.6);
+}
+
+.ad-label {
+    font-size: 0.72rem;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.ad-slot-box {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.ad-slot-placeholder {
+    color: #94A3B8;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.ad-slot-subtext {
+    font-size: 0.74rem;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+.btn-share-line {
+    background: linear-gradient(135deg, #06C755 0%, #05a044 100%) !important;
+    color: #FFFFFF !important;
+    border: 1px solid #06C755 !important;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(6, 199, 85, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-share-line:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+}
+
+.btn-copy-report {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid var(--c-brass-border) !important;
+    color: var(--c-brass-light) !important;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-copy-report:hover {
+    background: rgba(197, 160, 89, 0.15) !important;
+    color: #FFFFFF !important;
+    border-color: #DFC07A !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   極簡速算 ＆ 快速膠囊與折數神算盤樣式 (UX Simplicity & Bargain Suite)
+   ========================================================================== */
+.pill-btn {
+    display: inline-block;
+    padding: 3px 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border-subtle);
+    border-radius: 12px;
+    font-size: 0.72rem;
+    color: #94A3B8;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.pill-btn:hover {
+    background: rgba(197, 160, 89, 0.15);
+    color: #FFFFFF;
+    border-color: #DFC07A;
+}
+
+.pill-btn.active {
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.3) 0%, rgba(14, 23, 38, 0.9) 100%);
+    border-color: #DFC07A;
+    color: #DFC07A;
+    font-weight: 800;
+}
+
+.btn-bargain-rate:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+.btn-bargain-rate.active {
+    box-shadow: 0 0 10px rgba(223, 192, 122, 0.4);
+}
+
+

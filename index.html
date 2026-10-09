@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 2026 全國房屋估價、土地行情與地政稅務全能精算系統</title>
+    <meta name="description" content="2026 頂級房產智庫 VANDORA！全台22縣市368鄉鎮市區實價登錄2.0行情、地址門牌智慧估價、周邊全聯高鐵商圈加權、央行第七波信用管制自備款、房地合一稅2.0、土地增值稅一生一屋、共有土地34-1處分與40年新青安精算。">
+    <meta name="keywords" content="2026房地合一稅試算, 土地增值稅計算機, 一生一次一生一屋差別, 央行第七波信用管制限貸, 新青安40年房貸寬限期, 實價登錄行情查詢, 全台房屋估價, 車位拆算公式, 共有土地34-1條處分, 社會住宅包租代管節稅, 買賣簽約水單, 囤房稅2.0房屋稅, 遺產稅免稅額1333萬">
+    <meta name="author" content="VANDORA 專業地政稅務顧問團隊">
+    <link rel="canonical" href="https://gardenai0222-a11y.github.io/VANDORA/">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:site_name" content="VANDORA 房產估價與稅務智庫">
+    <meta property="og:title" content="VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 全國房屋估價、土地行情與地政稅務全能精算系統">
+    <meta property="og:description" content="深度利他！全台368鄉鎮市區全覆蓋、地址路段智慧估價、全聯高鐵商圈加權、房地合一2.0、共有物處分與簽約水單。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gardenai0222-a11y.github.io/VANDORA/">
+    <meta property="og:image" content="https://gardenai0222-a11y.github.io/VANDORA/assets/vandora_logo.png">
+    <meta property="og:locale" content="zh_TW">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VANDORA 房產估價與稅務智庫">
+    <meta name="twitter:description" content="全國實價登錄、房價估價、房地合一稅2.0與地政產權全能精算。">
+    <meta name="twitter:image" content="https://gardenai0222-a11y.github.io/VANDORA/assets/vandora_logo.png">
+
+    <!-- Google AdSense 廣告收益代碼 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1157627714001948" crossorigin="anonymous"></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "VANDORA 房產估價與稅務智庫",
+      "url": "https://gardenai0222-a11y.github.io/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gardenai0222-a11y.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VANDORA 房產估價與稅務智庫",
+      "url": "https://gardenai0222-a11y.github.io/",
+      "logo": "https://gardenai0222-a11y.github.io/VANDORA/assets/vandora_logo.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VANDORA 房產估價與地政稅務精算系統",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD"
+      },
+      "description": "2026 全台22縣市368鄉鎮市區實價登錄行情、地址路段智慧估價、房地合一稅2.0、土地增值稅一生一屋、共有土地34-1處分與40年新青安精算智庫。"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何使用 VANDORA 查詢全台 22 縣市 368 鄉鎮市區實價登錄行情？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VANDORA 內建全台 22 縣市（含屏東33鄉鎮、花蓮13鄉鎮、六都38區等）最新實價登錄大數據。只需在首頁工作台選取縣市鄉鎮，或輸入詳細地址，系統即可自動比對該區各類建物（電梯大樓、華廈、公寓、透天別墅、建地、農地）之公允每坪單價與總價成交區間。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VANDORA 智慧房屋估價如何進行生活機能與軌道商圈加權？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "系統依據內政部實價登錄基期數據，動態整合周邊 500 公尺至 1 公里內的全聯福利中心、台灣高鐵站點、台鐵車站營運樞紐與重點商圈之距離權重進行多元回歸估算，並提供銀行鑑價保守值與最高房貸建議。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "房屋估價時為什麼必須進行車位拆算？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "若未拆算車位，會將昂貴的房屋總價除以包含車位的總坪數，導致計算出的每坪單價被嚴重低估稀釋（差距可達 10%~15% 以上）。VANDORA 支援獨立車位分離鑑價，精確還原建物真實每坪純單價。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026年央行第七波信用管制對購屋房貸成數與自備款有何重大規定？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "央行第七波信用管制核心重點：(1)全國名下第2戶購屋貸款成數上限降為5成，且無寬限期；(2)名下有房再購買第1戶者無寬限期；(3)豪宅門檻（台北7000萬、新北6000萬、其他地區4000萬）貸款上限均為3成無寬限期。VANDORA在估價結算頁即時為買方精算首購與第2戶交屋所需自備總現金。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "土地法第 34 條之 1 共有土地處分，如何合法保障少數未同意共有人之價金？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "依113年最新修正之《土地法第三十四條之一執行要點》，多數共有人處分全筆不動產前，應以雙掛號書面通知他共有人踐行15日優先購買權催告。向管轄法院辦理清償提存時，應得扣除未同意共有人應分擔之土地增值稅及工程受益費，但不得扣除仲介費及代書費。"
+          }
+        }
+      ]
+    }
+    </script>
+
+</head>
+<body>
+
+     <!-- 頂級雙層典雅導覽列 (Precision Navbar) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/vandora_icon.png" alt="VANDORA Logo" class="brand-logo-img">
+                <div class="brand-titles">
+                    <span class="brand-name">VANDORA</span>
+                    <span class="brand-sub">開拓 ‧ 落地 ‧ 富饒 ｜ 房產估價與稅務專家</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="index.html" class="active">房產估價與行情</a></li>
+                <li><a href="roi.html">置產獲利 ＆ 脫手決策</a></li>
+                <li><a href="tax.html">地政稅務精算</a></li>
+                <li><a href="notes.html">代書實務筆記 ＆ QA</a></li>
+                <li><a href="javascript:void(0)" onclick="openSponsorModal()" class="btn-gold-action">贊助支持</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburgerBtn" style="font-size: 0.85rem; font-weight: 700; color: #DFC07A; border: 1px solid var(--c-border-subtle); padding: 5px 12px; border-radius: 4px; cursor: pointer;">選單</div>
+        </div>
+    </header>
+
+ <!-- 主頁首 Editorial Header -->
+ <section class="hero-editorial">
+ <div class="container">
+ <div class="hero-tag">
+ VANDORA ‧ 拉丁文：開拓 (Vanguard) ‧ 落地 (Terra) ‧ 富饒 (Prosperity)
+ </div>
+ <h1 class="hero-headline">
+ 全台房屋市值估價、土地每坪行情與生活機能加權<br>
+ <span>「VANDORA 房產實價行情 ＆ 智慧估價工作台」</span>
+ </h1>
+ <p class="hero-subhead">
+ 為全台灣買賣屋主、地主、房仲、代書與百萬房東打造。涵蓋全台 22 縣市（包含屏東33鄉鎮、花蓮13鄉鎮、高雄38區等）實價登錄、詳細地址路段智能解析、全聯/高鐵/火車站/商圈生活機能加權、建地農地行情、共有物多數決與雙邊簽約水單。
+ </p>
+
+ <!-- 房仲/代書專屬名片工具列 (輕量化折疊設計，兼顧一般大眾與經紀人) -->
+ <div style="max-width: 1120px; margin: 10px auto 0; text-align: center;">
+     <button type="button" onclick="toggleConsultantBar()" id="btn_toggle_consultant_bar" style="background: rgba(14, 23, 38, 0.85); border: 1px solid rgba(197, 160, 89, 0.35); color: #DFC07A; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s ease;">
+         
+         <span id="consultant_bar_status"> 房仲 ‧ 代書專屬名片系統 (點擊展開/編輯名片)</span>
+     </button>
+     <div id="consultant_bar_expandable" style="display: none; margin-top: 8px; padding: 12px 16px; background: rgba(11, 19, 43, 0.95); border: 1px solid var(--c-brass-gold); border-radius: var(--radius-sm); justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
+          <span style="font-size: 0.78rem; color: #CBD5E1;">印製水單抬頭：</span>
+          <input type="text" id="consultant_brand" class="input-styled" style="width: 145px; padding: 5px 8px; font-size: 0.8rem; background: rgba(0,0,0,0.5);" placeholder="加盟品牌/店名" onchange="saveConsultantProfile()">
+          <input type="text" id="consultant_name" class="input-styled" style="width: 105px; padding: 5px 8px; font-size: 0.8rem; background: rgba(0,0,0,0.5);" placeholder="經紀人/代書" onchange="saveConsultantProfile()">
+          <input type="text" id="consultant_phone" class="input-styled" style="width: 120px; padding: 5px 8px; font-size: 0.8rem; background: rgba(0,0,0,0.5);" placeholder="電話 09xx" onchange="saveConsultantProfile()">
+          <input type="text" id="consultant_line" class="input-styled" style="width: 100px; padding: 5px 8px; font-size: 0.8rem; background: rgba(0,0,0,0.5);" placeholder="LINE ID" onchange="saveConsultantProfile()">
+          <input type="hidden" id="user_consultant_title" class="consultant-title-input">
+          <button type="button" onclick="saveConsultantProfile(); toggleConsultantBar();" class="btn-save-card" style="background: rgba(197, 160, 89, 0.25); border: 1px solid var(--c-brass-gold); color: #DFC07A; padding: 5px 14px; border-radius: 4px; font-size: 0.78rem; font-weight: 800; cursor: pointer;">
+              儲存並套用
+          </button>
+     </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 主要核心工作台 -->
+ <main class="container">
+
+ <!-- ==========================================================================
+ 工具 0：全台 22 縣市 368 鄉鎮市區 房價與土地實價行情 AI 快速估價機 (旗艦級全覆蓋)
+ ========================================================================== -->
+ <div class="workbench-module" id="module-valuation">
+
+ 
+            
+
+        <div class="workbench-grid" style="margin-top: 14px;">
+ <div class="params-card">
+ 
+ <!-- 模式切換：10 秒極速估價 (極簡直覺) vs 專家精細加權 (地政房仲專用) -->
+ <div class="val-mode-toggle-bar" style="display: flex; gap: 8px; margin-bottom: 16px; background: rgba(11, 19, 43, 0.7); padding: 5px; border-radius: 8px; border: 1px solid var(--c-border-subtle);">
+     <button type="button" class="btn-mode-toggle active" id="btn_mode_simple" onclick="setValuationInputMode('simple')" style="flex: 1; padding: 9px 12px; border: none; border-radius: 6px; font-size: 0.84rem; font-weight: 800; cursor: pointer; transition: all 0.2s; background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10;">
+          10 秒極速估價 (極簡直覺)
+     </button>
+     <button type="button" class="btn-mode-toggle" id="btn_mode_pro" onclick="setValuationInputMode('pro')" style="flex: 1; padding: 9px 12px; border: 1px solid var(--c-border-subtle); border-radius: 6px; font-size: 0.84rem; font-weight: 800; cursor: pointer; transition: all 0.2s; background: transparent; color: #94A3B8;">
+         ️ 專家精細加權 (地政/房仲)
+     </button>
+ </div>
+
+ <div class="section-caption">
+ <h3 class="caption-title">標的地址 ＆ 全台灣行政區設定</h3>
+ <span class="caption-badge">368 鄉鎮市區 100% 全覆蓋</span>
+ </div>
+
+ <!-- 地址 / 主要路段 或 地籍段號地號智慧即時解析輸入框 -->
+ <div class="form-field">
+ <label class="field-label">
+ 標的門牌地址、主要路段 或 地籍段號地號（智慧自動識別）
+ <span class="field-tip">支援輸入路名或「潮寮段123地號」自動定位</span>
+ </label>
+ <input type="text" id="val_address" class="input-styled" placeholder="例：台北市大安區忠孝東路四段 或 屏東市自由路、高雄市大寮區潮寮段 123-4 地號..." oninput="parseAddressInput()">
+ <!-- 快速查看該門牌歷史成交履歷捷徑 -->
+ <div id="addr_quick_jump_box" style="margin-top: 8px;">
+ <a href="#address_history_section" class="addr-quick-jump-pill" onclick="highlightHistorySection(event)">
+ <span><span id="quick_history_badge">已載入【目前地址】歷史實價成交履歷</span></span>
+ <span class="jump-action-tip">點擊直接看歷年賣價 </span>
+ </a>
+ </div>
+ </div>
+
+ <!-- 縣市與鄉鎮市區二級聯動選單 -->
+ <div class="field-row">
+ <div class="form-field">
+ <label class="field-label">選擇縣市</label>
+ <select id="val_city" class="select-styled" onchange="updateDistrictOptions()"></select>
+ </div>
+ <div class="form-field">
+ <label class="field-label">選擇鄉鎮市區 (全台全覆蓋)</label>
+ <select id="val_dist" class="select-styled" onchange="calcValuation()"></select>
+ </div>
+ </div>
+
+ <div class="form-field">
+ <label class="field-label">估價標的類別</label>
+ <select id="val_target_mode" class="select-styled" onchange="toggleValuationTarget()">
+ <option value="house" selected>房屋住宅市值估價 (電梯大樓 / 公寓 / 華廈 / 透天別墅)</option>
+ <option value="land">土地每坪行情估價 (都市計畫建地 / 農業用地 / 工業地 / 無門牌地號)</option>
+ </select>
+ </div>
+
+ <!-- 房屋專用參數區 (10 大建物型態全覆蓋) -->
+ <div id="val_house_params_box">
+ <div class="field-row">
+ <div class="form-field">
+ <label class="field-label">建物型態分類 (10 大完整分類)</label>
+ <select id="val_type" class="select-styled" onchange="calcValuation()">
+ <option value="presale">預售屋 / 5年內新成屋 (預售市場基準)</option>
+ <option value="mansion" selected>電梯大樓 (11層以上 ‧ 標準基準)</option>
+ <option value="huaxia">電梯華廈 (7~10層 ‧ 折價約8%)</option>
+ <option value="apartment">無電梯公寓 (4~5層 ‧ 折價約20%)</option>
+ <option value="villa_solo">獨棟 / 雙併豪華別墅 (+12% 溢價)</option>
+ <option value="villa_row">連棟透天厝 / 店面透天住宅</option>
+ <option value="industry_house">工業住宅 / 乙工建案 (折價約18%)</option>
+ <option value="office">商務辦公室 / 現代廠辦 (+5%)</option>
+ <option value="farm_house">合法農舍 (非都市農用住宅)</option>
+ <option value="studio">套房 / 15坪以下小資宅 (+8%)</option>
+ </select>
+ </div>
+ <div class="form-field">
+ <label class="field-label">建物屋齡 (年)</label>
+ <input type="number" id="val_age" class="input-styled" value="8" oninput="calcValuation()">
+ <div class="quick-pills-row" style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px;">
+     <span class="age-pill pill-btn" data-val="1" onclick="quickSetAge(1)">新成屋 (1年)</span>
+     <span class="age-pill pill-btn active" data-val="8" onclick="quickSetAge(8)">次新屋 (8年)</span>
+     <span class="age-pill pill-btn" data-val="18" onclick="quickSetAge(18)">成屋 (18年)</span>
+     <span class="age-pill pill-btn" data-val="35" onclick="quickSetAge(35)">老屋 (35年)</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="field-row">
+ <div class="form-field">
+ <label class="field-label">建物登記總坪數 (坪)</label>
+ <input type="number" id="val_ping" class="input-styled" value="38.5" oninput="calcValuation()">
+ <div class="quick-pills-row" style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px;">
+     <span class="ping-pill pill-btn" data-val="15" onclick="quickSetPing(15)">15坪 小資</span>
+     <span class="ping-pill pill-btn" data-val="25" onclick="quickSetPing(25)">25坪 兩房</span>
+     <span class="ping-pill pill-btn active" data-val="38.5" onclick="quickSetPing(38.5)">38.5坪 三房</span>
+     <span class="ping-pill pill-btn" data-val="50" onclick="quickSetPing(50)">50坪 四房</span>
+     <span class="ping-pill pill-btn" data-val="70" onclick="quickSetPing(70)">70坪 大戶</span>
+ </div>
+ </div>
+ <div class="form-field">
+ <label class="field-label">車位配置與種類</label>
+ <select id="val_parking_config" class="select-styled" onchange="calcValuation()">
+ <option value="none" selected>無車位 (純房屋產權 ‧ 獨立鑑價)</option>
+ <option value="flat_1">坡道平面車位 1 個</option>
+ <option value="flat_2">坡道平面車位 2 個 (雙車位)</option>
+ <option value="mech_1">機械 / 升降車位 1 個</option>
+ <option value="mech_2">機械 / 升降車位 2 個</option>
+ <option value="ground">一樓門前 / 庭院騎樓停車</option>
+ </select>
+ </div>
+ </div>
+
+ <!-- 專家精細參數容器 (Simple 模式下自動收合，Pro 模式下展開) -->
+ <div id="val_pro_params_container" style="display: none; margin-top: 14px; padding: 14px; background: rgba(0, 0, 0, 0.25); border: 1px dashed rgba(223, 192, 122, 0.3); border-radius: 6px;">
+     <div style="font-size: 0.8rem; color: #DFC07A; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+         <span> 專家級精細加權參數 (樓層/公設比/開價/生活機能加減分)：</span>
+         <span style="font-size: 0.7rem; color: #94A3B8; font-weight: normal;">自由選填</span>
+     </div>
+
+     <div class="field-row">
+         <div class="form-field">
+             <label class="field-label">所在樓層位置 (樓層溢折價)</label>
+             <select id="val_floor" class="select-styled" onchange="calcValuation()">
+                 <option value="sub_top">次頂樓 (景觀帝王戶 ‧ 溢價 +6%)</option>
+                 <option value="high">高樓層 (7樓以上 ‧ 採光佳 +3%)</option>
+                 <option value="middle" selected>中樓層 (3~6樓 ‧ 常態標準基準)</option>
+                 <option value="floor_4">4 樓 (民間諧音抗性折讓 -3%)</option>
+                 <option value="low_2">2 樓 (管線轉折抗性折讓 -4%)</option>
+                 <option value="ground_1">1 樓 (門前庭院/店面效應 +20%)</option>
+                 <option value="top">頂樓 (漏水高溫疑慮折讓 -2%)</option>
+             </select>
+         </div>
+         <div class="form-field">
+             <label class="field-label">面前臨路寬度 <span class="field-tip">路寬影響會車與通行抗性</span></label>
+             <select id="val_house_road_width" class="select-styled" onchange="calcValuation()">
+                 <option value="4_less">4 米以下窄巷 (無會車/死巷 ‧ 折讓 -6%)</option>
+                 <option value="6_8" selected>6~8 米活巷 (常態通暢 ‧ 基準)</option>
+                 <option value="10_12">10~12 米街巷 (寬敞好停 ‧ 溢價 +3%)</option>
+                 <option value="15_more">15 米以上主要幹道 (大道首排/店面效應 +6%)</option>
+             </select>
+         </div>
+         <div class="form-field">
+             <label class="field-label">建物公設比率 (%) <span class="field-tip">實坪單價還原</span></label>
+             <input type="number" id="val_common_ratio" class="input-styled" value="32" min="0" max="60" oninput="calcValuation()">
+         </div>
+     </div>
+
+     <div class="field-row">
+         <div class="form-field">
+             <label class="field-label">屋主目前開價 (萬元 ‧ 選填)</label>
+             <input type="number" id="val_asking_price" class="input-styled" placeholder="例：2400 (即時比對開價溢價比率)" oninput="calcValuation()">
+         </div>
+         <div class="form-field" style="display: flex; flex-direction: column; justify-content: center;">
+             <label class="check-item" style="margin-top: 14px; font-size: 0.82rem; color: var(--c-brass-light);">
+                 <input type="checkbox" id="val_parking_included" onchange="toggleParkingPingBox(); calcValuation();">
+                 <span>填寫總坪數<strong>已包含車位坪數</strong>（自動拆算車位坪數）</span>
+             </label>
+             <div id="val_parking_ping_box" style="display: none; margin-top: 6px;">
+                 <input type="number" id="val_parking_ping" class="input-styled" value="10" placeholder="車位坪數 (預設10坪)" oninput="calcValuation()">
+             </div>
+         </div>
+     </div>
+
+     <!-- 完整周邊重大建設與生活機能加減分清單 (全聯、高鐵、火車、市區商圈、醫院、學區、嫌惡設施) -->
+     <div class="form-field">
+         <label class="field-label">周邊重大建設與生活機能加減分條件</label>
+         <div class="deduction-checklist">
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="4" checked onchange="calcValuation()">
+                 <span>步行 500m 內有 <strong>全聯福利中心 / 大型家樂福 / 傳統市場</strong> ［+4% 生活機能溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="12" onchange="calcValuation()">
+                 <span>距 <strong>高鐵站</strong> 2km 內或高鐵特區核心 ［+12% 重大軌道樞紐溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="8" checked onchange="calcValuation()">
+                 <span>距 <strong>火車站 / 捷運站 / 輕軌站</strong> 500m 內 ［+8% 軌道交通溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" id="chk_fac_downtown" value="8" onchange="calcValuation()">
+                 <span>位處 <strong>主要市區精華商圈 / 幹道首排</strong> ［+8% 精華商圈溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="5" checked onchange="calcValuation()">
+                 <span>明星雙語學區 / 國立大學文教周邊 ［+5% 文教溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="5" onchange="calcValuation()">
+                 <span>萬坪都會公園首排 / 永久棟距開闊景觀 ［+5% 環境溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="4" onchange="calcValuation()">
+                 <span>區域大型綜合醫院 / 醫學中心 1km 內 ［+4% 醫療機能溢價］</span>
+             </label>
+             <label class="check-item">
+                 <input type="checkbox" class="chk-val-factor" value="-8" onchange="calcValuation()">
+                 <span>嫌惡設施扣分：周邊 300m 內有 加油站 / 宮廟香火 / 高壓電塔 / 殯葬設施 ［-8% 折價］</span>
+             </label>
+         </div>
+     </div>
+ </div>
+ </div>
+
+
+ <!-- 土地專用參數區 (10 大土地分區全覆蓋 ＋ 地籍地號設定) -->
+ <div id="val_land_params_box" style="display: none;">
+ <div class="field-row">
+ <div class="form-field">
+ <label class="field-label">地籍段名 (選填)</label>
+ <input type="text" id="val_cadastral_sec" class="input-styled" placeholder="例：潮寮段、惠國段、歸來段" oninput="calcValuation()">
+ </div>
+ <div class="form-field">
+ <label class="field-label">土地地號 (選填)</label>
+ <input type="text" id="val_cadastral_no" class="input-styled" placeholder="例：123-4 地號" oninput="calcValuation()">
+ </div>
+ </div>
+
+ <div class="field-row">
+ <div class="form-field">
+ <label class="field-label">土地分區與用地類別 (10 大完整分類)</label>
+ <select id="val_land_cat" class="select-styled" onchange="calcValuation()">
+ <option value="urban_r1">都市計畫 ‧ 第一種住宅區 (住一 ‧ +10%)</option>
+ <option value="urban_r23" selected>都市計畫 ‧ 第二、三種住宅區 (住二/住三 ‧ 基準)</option>
+ <option value="urban_com">都市計畫 ‧ 商業區 (商一~商四 ‧ +65%)</option>
+ <option value="urban_ind">都市計畫 ‧ 工業區建地 (乙工/丁種 ‧ -20%)</option>
+ <option value="non_urban_jia">非都市土地 ‧ 甲種建築用地 (農業區建地 ‧ -35%)</option>
+ <option value="non_urban_yi">非都市土地 ‧ 乙種建築用地 (鄉村區建地 ‧ -45%)</option>
+ <option value="non_urban_bing">非都市土地 ‧ 丙種建築用地 (山坡地保育區建地 ‧ -55%)</option>
+ <option value="non_urban_ding">非都市土地 ‧ 丁種建築用地 (非都工業地 ‧ -50%)</option>
+ <option value="farm_general">一般農業區 ‧ 農牧用地 (特農/一般農 ‧ 農地基準)</option>
+ <option value="forest_protect">山坡地保育區 ‧ 林業/國土保安用地 (-50%)</option>
+ </select>
+ </div>
+ <div class="form-field">
+ <label class="field-label">土地總面積 (坪)</label>
+ <input type="number" id="val_land_ping" class="input-styled" value="120" oninput="calcValuation()">
+ </div>
+ </div>
+
+ <div class="form-field">
+ <label class="field-label">面前臨路寬度 (公尺) <span class="field-tip">路寬影響開發建蔽容積與車輛出入</span></label>
+ <input type="number" id="val_road_width" class="input-styled" value="8" oninput="calcValuation()">
+ </div>
+ </div>
+ </div>
+
+ <div class="statement-card">
+            <div>
+                <div class="watermark-header">
+                    <div class="watermark-title">實價行情與銀行鑑價評估書</div>
+                    <div class="watermark-date">依內政部實價登錄大數據與銀行授信放款鑑價模型</div>
+                </div>
+
+                <!-- 結算面板三大專業視圖切換 (Segmented Result Tabs) -->
+                <div class="result-tab-bar" style="display: flex; gap: 4px; background: rgba(0,0,0,0.45); padding: 4px; border-radius: var(--radius-xs); border: 1px solid var(--c-border-subtle); margin-bottom: 16px;">
+                    <button type="button" class="btn-res-tab active" id="btn_rtab_core" onclick="switchResultTab('core')" style="flex: 1; padding: 8px 10px; border: none; border-radius: 4px; font-size: 0.82rem; font-weight: 700; cursor: pointer; background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; transition: all 0.2s ease;">核心估價結算</button>
+                    <button type="button" class="btn-res-tab" id="btn_rtab_closer" onclick="switchResultTab('closer')" style="flex: 1; padding: 8px 10px; border: none; border-radius: 4px; font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--c-text-muted); transition: all 0.2s ease;">買賣雙方速查</button>
+                    <button type="button" class="btn-res-tab" id="btn_rtab_invest" onclick="switchResultTab('invest')" style="flex: 1; padding: 8px 10px; border: none; border-radius: 4px; font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--c-text-muted); transition: all 0.2s ease;">投資斡旋分析</button>
+                </div>
+
+                <!-- 視圖 1：核心估價結算 (預設顯示) -->
+                <div id="rtab_panel_core">
+                    <div class="big-stat-block">
+                        <div class="stat-label">預估合理市場行情總價區間</div>
+                        <div class="stat-val-huge" id="val_out_range">NT$ 0</div>
+                        <div class="stat-val-sub" id="val_out_range_sub" style="font-size: 0.84rem; color: #94A3B8; font-family: var(--font-mono); margin-top: 5px;"></div>
+                    </div>
+
+                    <div class="statement-ledger">
+                        <div class="ledger-row">
+                            <span class="label">預估每坪平均行情單價：</span>
+                            <span class="value gold" id="val_out_unit_price">0 萬元 / 坪</span>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="label">預估基準成交總價：</span>
+                            <span class="value emerald" style="font-size: 1.15rem;" id="val_out_est_total">NT$ 0</span>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="label">預估銀行放款鑑價值：</span>
+                            <span class="value" id="val_out_bank_val">NT$ 0</span>
+                        </div>
+                        <div class="ledger-row" style="border-top: 1px solid var(--c-border-hairline); padding-top: 10px; margin-top: 8px;">
+                            <span class="label" style="font-weight: 800; color: #FFFFFF;">預估最高融資 / 房貸額度：</span>
+                            <span class="value gold" id="val_out_max_loan">NT$ 0</span>
+                        </div>
+                    </div>
+
+                    <!-- 租金與毛淨投報速覽 -->
+                    <div style="background: rgba(0,0,0,0.35); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); padding: 12px 16px; margin-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <div style="font-size: 0.74rem; color: var(--c-text-dim);">預估市場月租金水準</div>
+                            <div style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF;" id="val_out_rent_est">約 NT$ 0 / 月</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 0.74rem; color: var(--c-text-dim);">年化租金投報率 (Cap Rate)</div>
+                            <div style="font-size: 0.92rem; font-weight: 700;" id="val_out_cap_rate">0.00%</div>
+                        </div>
+                    </div>
+
+                    <!-- 執行決策中心 (Executive Action Hub) -->
+                    <div class="executive-action-hub" style="background: rgba(10, 15, 29, 0.9); border: 1px solid var(--c-brass-gold); border-radius: var(--radius-sm); padding: 14px 16px; margin-top: 16px;">
+                        <div style="font-size: 0.76rem; color: var(--c-brass-light); font-weight: 800; margin-bottom: 10px; letter-spacing: 0.5px;">
+                            報告匯出與社群分享：
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 10px;">
+                            <button type="button" onclick="shareValuationToLine()" style="background: #06C755; color: #FFFFFF; font-weight: 800; font-size: 0.82rem; padding: 9px 12px; border: none; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                                LINE 格式化分享
+                            </button>
+                            <button type="button" onclick="copyValuationSummaryText()" style="background: rgba(223, 192, 122, 0.2); border: 1px solid var(--c-brass-gold); color: #DFC07A; font-weight: 800; font-size: 0.82rem; padding: 9px 12px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                                複製估價速報
+                            </button>
+                            <button type="button" onclick="exportValuationToExcel()" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #6EE7B7; font-weight: 800; font-size: 0.82rem; padding: 9px 12px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                                下載 Excel 估價單
+                            </button>
+                            <button type="button" onclick="printValuationStatement()" style="background: rgba(148, 163, 184, 0.2); border: 1px solid #94A3B8; color: #F1F5F9; font-weight: 800; font-size: 0.82rem; padding: 9px 12px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                                列印 / PDF 水單
+                            </button>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-top: 1px solid var(--c-border-hairline); padding-top: 10px;">
+                            <button type="button" onclick="bridgeValuationToRoi()" style="background: rgba(59, 130, 246, 0.15); border: 1px solid #3B82F6; color: #93C5FD; font-weight: 800; font-size: 0.82rem; padding: 8px; border-radius: 5px; cursor: pointer; text-align: center;">
+                                置產獲利 ROI 精算 →
+                            </button>
+                            <button type="button" onclick="bridgeValuationToTax()" style="background: rgba(197, 160, 89, 0.15); border: 1px solid var(--c-brass-gold); color: #DFC07A; font-weight: 800; font-size: 0.82rem; padding: 8px; border-radius: 5px; cursor: pointer; text-align: center;">
+                                地政簽約稅務水單 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 視圖 2：買賣雙方速查 (Closing Settlement) -->
+                <div id="rtab_panel_closer" style="display: none;">
+                    <!-- 央行第七波信用管制限貸防斷頭速查 -->
+                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 6px; padding: 12px; margin-bottom: 14px;">
+                        <div style="font-weight: 800; font-size: 0.84rem; color: #F87171; margin-bottom: 6px;">
+                            央行信用管制限貸規範速查：
+                        </div>
+                        <div id="val_out_credit_control_info" style="font-size: 0.82rem; color: #E2E8F0; line-height: 1.6;">
+                            載入中...
+                        </div>
+                    </div>
+
+                    <!-- 買賣雙方一頁式成交速算 -->
+                    <div class="quick-deal-closer-box" style="background: rgba(11, 19, 43, 0.8); border: 1px solid var(--c-border-subtle); border-radius: 6px; padding: 14px; margin-bottom: 14px;">
+                        <div style="font-size: 0.88rem; font-weight: 800; color: #DFC07A; margin-bottom: 10px;">
+                            買賣雙方一頁式成交速算（需備資金與實拿淨現金）：
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 6px; border-top: 3px solid #60A5FA;">
+                                <div style="font-size: 0.84rem; font-weight: 800; color: #93C5FD; margin-bottom: 6px;">買方交屋總備用金</div>
+                                <div style="margin-top: 6px;">
+                                    <div style="font-size: 0.72rem; color: #94A3B8;">首購自備+稅規費：</div>
+                                    <div style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-mono);" id="qdc_buyer_first_total">NT$ 0</div>
+                                    <div style="font-size: 0.72rem; color: #60A5FA;" id="qdc_buyer_first_down">自備款 20%</div>
+                                </div>
+                                <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.15);">
+                                    <div style="font-size: 0.72rem; color: #94A3B8;">二戶/置產總備用金：</div>
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: #FCA5A5; font-family: var(--font-mono);" id="qdc_buyer_second_total">NT$ 0</div>
+                                    <div style="font-size: 0.72rem; color: #F87171;" id="qdc_buyer_second_down">限貸 5 成</div>
+                                </div>
+                                <div style="margin-top: 6px; font-size: 0.72rem; color: #CBD5E1;" id="qdc_buyer_tax_fees">預估稅費規費約 NT$ 0</div>
+                            </div>
+                            <div style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 6px; border-top: 3px solid #34D399;">
+                                <div style="font-size: 0.84rem; font-weight: 800; color: #6EE7B7; margin-bottom: 6px;">賣方存摺實拿淨額</div>
+                                <div style="margin-top: 6px;">
+                                    <div style="font-size: 0.72rem; color: #94A3B8;">預估結案落袋淨現金：</div>
+                                    <div style="font-size: 1.25rem; font-weight: 900; color: #34D399; font-family: var(--font-mono);" id="qdc_seller_net_cash">NT$ 0</div>
+                                    <div style="font-size: 0.72rem; color: #A7F3D0;">已全數扣除交易成本</div>
+                                </div>
+                                <div style="margin-top: 8px; padding: 6px; background: rgba(0,0,0,0.3); border-radius: 4px; font-size: 0.72rem; color: #CBD5E1; line-height: 1.5;">
+                                    <div>仲介服務費 (4%)：<strong id="qdc_seller_agent_fee">NT$ 0</strong></div>
+                                    <div>預估土地增值稅：<strong id="qdc_seller_land_tax">NT$ 0</strong></div>
+                                    <div>扣減總費用：<strong id="qdc_seller_deductions">NT$ 0</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 現場議價與簽約談判說帖 -->
+                    <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--c-border-hairline); border-radius: 6px; padding: 12px;">
+                        <div style="font-size: 0.76rem; color: #DFC07A; font-weight: 800; margin-bottom: 8px;">
+                            現場議價與簽約談判說帖（一鍵複製貼至 LINE）：
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                            <button type="button" onclick="copyNegotiationScript('closing_memo')" style="background: rgba(255,255,255,0.06); border: 1px solid var(--c-border-subtle); color: #E2E8F0; padding: 7px; border-radius: 4px; font-size: 0.76rem; cursor: pointer; text-align: left;">
+                                買賣雙方簽約水單
+                            </button>
+                            <button type="button" onclick="copyNegotiationScript('bargain_investor')" style="background: rgba(255,255,255,0.06); border: 1px solid var(--c-border-subtle); color: #E2E8F0; padding: 7px; border-radius: 4px; font-size: 0.76rem; cursor: pointer; text-align: left;">
+                                投資客斡旋壓價說帖
+                            </button>
+                            <button type="button" onclick="copyNegotiationScript('seller_strategy')" style="background: rgba(255,255,255,0.06); border: 1px solid var(--c-border-subtle); color: #E2E8F0; padding: 7px; border-radius: 4px; font-size: 0.76rem; cursor: pointer; text-align: left;">
+                                屋主委託開價策略
+                            </button>
+                            <button type="button" onclick="copyNegotiationScript('buyer_offer')" style="background: rgba(255,255,255,0.06); border: 1px solid var(--c-border-subtle); color: #E2E8F0; padding: 7px; border-radius: 4px; font-size: 0.76rem; cursor: pointer; text-align: left;">
+                                自住買方出價說帖
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 視圖 3：投資斡旋分析 (Investor & Negotiation) -->
+                <div id="rtab_panel_invest" style="display: none;">
+                    <!-- 1. 出價安全邊際 (85折 / 90折) -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+                        <div style="background: rgba(0,0,0,0.4); padding: 10px 12px; border-radius: 6px; border-left: 3.5px solid #34D399;">
+                            <div style="font-size: 0.74rem; color: #94A3B8;">85 折安全進場價 (建議斡旋)</div>
+                            <div style="font-size: 1.15rem; font-weight: 800; color: #34D399; font-family: var(--font-mono); margin-top: 2px;" id="val_out_entry_85">NT$ 0</div>
+                            <div style="font-size: 0.72rem; color: #6EE7B7; margin-top: 2px;" id="val_out_safety_buffer">獲利保護傘 +0 萬</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 10px 12px; border-radius: 6px; border-left: 3.5px solid #60A5FA;">
+                            <div style="font-size: 0.74rem; color: #94A3B8;">90 折合理出價 (常態議價)</div>
+                            <div style="font-size: 1.15rem; font-weight: 800; color: #60A5FA; font-family: var(--font-mono); margin-top: 2px;" id="val_out_entry_90">NT$ 0</div>
+                            <div style="font-size: 0.72rem; color: #93C5FD; margin-top: 2px;">常態可談區間</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 投資客斡旋出價折數神算盤 (8折/85折/9折/95折) -->
+                    <div style="background: rgba(0,0,0,0.35); border: 1px solid rgba(223, 192, 122, 0.35); border-radius: 6px; padding: 12px; margin-bottom: 12px;">
+                        <div style="font-size: 0.82rem; font-weight: 800; color: #DFC07A; margin-bottom: 8px;">
+                            投資客斡旋出價折數盤（一鍵測算自備與月負擔）：
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 8px;">
+                            <button type="button" class="btn-bargain-discount" id="btn_disc_80" onclick="selectBargainDiscount(0.80)" style="padding: 6px 4px; border: 1px solid #34D399; background: rgba(52, 211, 153, 0.15); color: #6EE7B7; border-radius: 4px; font-weight: 800; font-size: 0.76rem; cursor: pointer;">80 折 (深壓)</button>
+                            <button type="button" class="btn-bargain-discount active" id="btn_disc_85" onclick="selectBargainDiscount(0.85)" style="padding: 6px 4px; border: 1px solid #DFC07A; background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; border-radius: 4px; font-weight: 800; font-size: 0.76rem; cursor: pointer;">85 折 (標準)</button>
+                            <button type="button" class="btn-bargain-discount" id="btn_disc_90" onclick="selectBargainDiscount(0.90)" style="padding: 6px 4px; border: 1px solid #60A5FA; background: rgba(96, 165, 250, 0.15); color: #93C5FD; border-radius: 4px; font-weight: 800; font-size: 0.76rem; cursor: pointer;">90 折 (常態)</button>
+                            <button type="button" class="btn-bargain-discount" id="btn_disc_95" onclick="selectBargainDiscount(0.95)" style="padding: 6px 4px; border: 1px solid #CBD5E1; background: rgba(255, 255, 255, 0.08); color: #E2E8F0; border-radius: 4px; font-weight: 800; font-size: 0.76rem; cursor: pointer;">95 折 (微讓)</button>
+                        </div>
+                        <div id="bargain_calc_result_box" style="background: rgba(0,0,0,0.5); border-radius: 4px; padding: 8px 10px; font-size: 0.76rem; line-height: 1.5; color: #E2E8F0;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>斡旋折後總價：<strong id="bargain_out_total" style="color: #DFC07A; font-family: var(--font-mono); font-size: 0.88rem;">NT$ 0</strong></span>
+                                <span>單價降至：<strong id="bargain_out_unit" style="color: #6EE7B7; font-family: var(--font-mono);">0 萬/坪</strong></span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 3px; color: #94A3B8;">
+                                <span>需備頭期款 (20%)：<strong id="bargain_out_down" style="color: #FFFFFF;">NT$ 0</strong></span>
+                                <span>月付房貸本息：<strong id="bargain_out_month" style="color: #FFFFFF;">NT$ 0 /月</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 開價合理性審查與 DOM -->
+                    <div style="margin-bottom: 12px;">
+                        <div id="val_out_asking_eval" style="display: none; background: rgba(0,0,0,0.3); border-radius: 6px; padding: 10px; border-left: 3.5px solid #F59E0B; margin-bottom: 8px;"></div>
+                        <div style="background: rgba(0,0,0,0.3); border-radius: 6px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.76rem; color: #C4B5FD; font-weight: 700;">預估市場去化天數 (DOM) ＆ 流通評級：</span>
+                            <span style="font-size: 0.82rem; font-weight: 800; color: #FFFFFF;" id="val_out_dom_eval">約 65~90 天 (常態流通)</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. 財務指標清單 (實坪還原, CoC, DSCR) -->
+                    <div class="statement-ledger" style="margin-top: 0; background: rgba(0,0,0,0.25); padding: 8px 12px; border-radius: 6px;">
+                        <div class="ledger-row">
+                            <span class="label">室內主附實用坪數：</span>
+                            <span class="value" id="val_out_indoor_ping">0 坪</span>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="label">實坪還原每坪單價：</span>
+                            <span class="value gold" id="val_out_indoor_unit">0 萬元 / 坪</span>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="label">投資客自有現金回報 (Cash-on-Cash)：</span>
+                            <span class="value emerald" id="val_out_coc">0.00%</span>
+                        </div>
+                        <div class="ledger-row" style="border-bottom: none;">
+                            <span class="label">以租養房房貸利息覆蓋率 (DSCR)：</span>
+                            <span class="value" id="val_out_dscr">0.00 倍</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. 複製 AI 深度分析 Prompt -->
+                    <div style="margin-top: 12px;">
+                        <button type="button" onclick="copyAiValuationPrompt()" style="width: 100%; background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(124, 58, 237, 0.35) 100%); border: 1px solid #A78BFA; color: #E9D5FF; font-weight: 800; font-size: 0.82rem; padding: 9px 12px; border-radius: 6px; cursor: pointer; text-align: center;">
+                            複製 AI 房產深度分析 Prompt（可貼入 ChatGPT / Claude）
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.workbench-grid -->
+
+    <!-- 即時動態行政區實價登錄行情看板 -->
+    <div id="district_stats_dashboard" style="margin-top: 20px;"></div>
+
+    <!-- 實價情報雙欄控制台：左欄走勢圖表 ＆ 右欄歷史成交履歷 (限高 380px 滾動) -->
+    <div class="market-intelligence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 20px; margin-top: 16px;">
+        <!-- 左欄：實價登錄歷史走勢與漲跌幅動態分析儀表 -->
+        <div class="trend-chart-card" style="background: var(--c-bg-surface); border: 1px solid var(--c-border-subtle); border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-elevated); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--c-border-hairline); padding-bottom: 10px;">
+                    <div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #FFFFFF;">
+                            <span id="trend_chart_title">該區實價登錄歷史走勢與漲跌幅分析</span>
+                        </h4>
+                        <div style="font-size: 0.8rem; color: var(--c-text-muted); margin-top: 2px;">
+                            每週定時向內政部實價登錄開放平台自動更新對比
+                        </div>
+                    </div>
+
+                    <!-- 時間維度切換按鈕 (1年/5年/10年) -->
+                    <div class="trend-timeframe-group" style="display: flex; gap: 6px; background: var(--c-bg-canvas); padding: 4px; border-radius: var(--radius-sm); border: 1px solid var(--c-border-subtle);">
+                        <button type="button" class="btn-timeframe active" id="btn_tf_1y" onclick="changeTrendPeriod('1y')">近 1 年 (每月)</button>
+                        <button type="button" class="btn-timeframe" id="btn_tf_5y" onclick="changeTrendPeriod('5y')">近 5 年 (年度)</button>
+                        <button type="button" class="btn-timeframe" id="btn_tf_10y" onclick="changeTrendPeriod('10y')">近 10 年 (長線)</button>
+                    </div>
+                </div>
+
+                <!-- 走勢 KPI 統計摘要列 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-bottom: 12px;">
+                    <div style="background: var(--c-bg-canvas); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); padding: 10px 12px;">
+                        <div style="font-size: 0.74rem; color: var(--c-text-dim);">區間累積漲跌幅</div>
+                        <div style="font-size: 1.15rem; font-weight: 800; font-family: var(--font-mono); margin-top: 2px;" id="trend_kpi_change">+0.0%</div>
+                    </div>
+                    <div style="background: var(--c-bg-canvas); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); padding: 10px 12px;">
+                        <div style="font-size: 0.74rem; color: var(--c-text-dim);">歷史最高單價</div>
+                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--c-brass-light); font-family: var(--font-mono); margin-top: 2px;" id="trend_kpi_max">0 萬/坪</div>
+                    </div>
+                    <div style="background: var(--c-bg-canvas); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); padding: 10px 12px;">
+                        <div style="font-size: 0.74rem; color: var(--c-text-dim);">起漲點最低單價</div>
+                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--c-text-muted); font-family: var(--font-mono); margin-top: 2px;" id="trend_kpi_min">0 萬/坪</div>
+                    </div>
+                    <div style="background: var(--c-bg-canvas); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); padding: 10px 12px;">
+                        <div style="font-size: 0.74rem; color: var(--c-text-dim);">更新週期</div>
+                        <div style="font-size: 0.88rem; font-weight: 700; color: #34D399; margin-top: 4px;">每週定期同步</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 互動式 Canvas 畫布 -->
+            <div style="position: relative; width: 100%; height: 260px;">
+                <canvas id="vandoraTrendCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- 右欄：周邊實價登錄真實成交履歷 (限高滾動) -->
+        <div class="address-history-card" id="address_history_section" style="background: var(--c-bg-surface); border: 1px solid var(--c-border-subtle); border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-elevated); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div class="section-caption" style="margin-bottom: 12px;">
+                    <h3 class="caption-title"><span id="addr_history_title">標的周邊同類型標的物實價成交履歷</span></h3>
+                    <span class="caption-badge" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3);">內政部實價 2.0 完全揭露</span>
+                </div>
+
+                <!-- 1. 訪客查詢標的門牌之真實申報狀態 -->
+                <div id="target_addr_status_box" style="background: rgba(10, 13, 16, 0.7); border: 1px solid rgba(197, 160, 89, 0.35); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 12px;">
+                    <div style="font-size: 0.9rem; color: #FFFFFF; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                        <span>查詢標的門牌：<strong id="lookup_target_addr" style="color: #DFC07A;">屏東縣屏東市自由路</strong></span>
+                        <span style="font-size: 0.76rem; background: rgba(52, 211, 153, 0.15); color: #34D399; padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(52, 211, 153, 0.3);">自住長期持有中</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.5;">
+                        本門牌自 101 年實價登錄實施以來查無買賣轉手申報紀錄（屬長期自用住宅）。系統為您調出周邊鄰近同類型建物之最新成交明細：
+                    </div>
+                </div>
+
+                <!-- 2. 周邊類似標的物真實成交明細表 (限高滾動容器) -->
+                <div class="address-history-table-container" style="max-height: 250px; overflow-y: auto; border: 1px solid var(--c-border-hairline); border-radius: var(--radius-xs); margin-bottom: 12px;">
+                    <table class="address-history-table" style="margin: 0; width: 100%;">
+                        <thead style="position: sticky; top: 0; background: #0E1726; z-index: 2;">
+                            <tr>
+                                <th>交易年月</th>
+                                <th>門牌路段/樓層</th>
+                                <th>單價(萬/坪)</th>
+                                <th>總價(萬)</th>
+                                <th>坪數</th>
+                                <th>型態格局</th>
+                                <th>比對關聯</th>
+                            </tr>
+                        </thead>
+                        <tbody id="address_history_tbody">
+                            <!-- JS 動態填入真實周邊成交明細 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 3. 官方查詢跳轉引導 -->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: var(--radius-sm); padding: 10px 14px;">
+                <div style="font-size: 0.82rem; color: #CBD5E1;">
+                    欲調閱主管機關法定原始申報書？可直接連線內政部官網調閱公文。
+                </div>
+                <a href="https://plvr.land.moi.gov.tw" target="_blank" class="btn-export-excel" style="text-decoration: none; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10;">
+                    開啟實價登錄 2.0 官網
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#module-valuation -->
+
+
+ <!-- ==========================================================================
+      專項神器：實價登錄車位拆算真實每坪淨單價計算機 (永慶房仲實務必備)
+      ========================================================================== -->
+ <section class="card" style="background: var(--c-bg-surface); border: 1px solid var(--c-brass-border); border-radius: var(--radius-md); padding: 26px 30px; margin: 30px 0; box-shadow: var(--shadow-elevated);">
+     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--c-border-hairline); padding-bottom: 14px; margin-bottom: 20px;">
+         <div>
+             <div style="font-size: 0.78rem; font-weight: 800; color: #DFC07A; letter-spacing: 1px; text-transform: uppercase;">
+                 PARKING UNBUNDLING SUITE ‧ 實價登錄單價還原
+             </div>
+             <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #FFFFFF; margin-top: 4px;">
+                 實價登錄含車位拆算 ‧ 真實房屋每坪淨單價精算機
+             </h3>
+         </div>
+         <span style="background: rgba(197, 160, 89, 0.15); color: #DFC07A; border: 1px solid var(--c-brass-border); padding: 4px 10px; border-radius: 4px; font-size: 0.78rem; font-weight: 700;">
+             房仲估價必拆車位
+         </span>
+     </div>
+
+     <div class="workbench-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+         <div>
+             <p style="font-size: 0.85rem; color: var(--c-text-muted); line-height: 1.6; margin-bottom: 16px;">
+                 內政部實價登錄常將車位坪數灌入總建物面積（如總價2200萬含車位200萬、登記46.5坪含車位10.5坪），若未拆算將虛胖坪數、大幅低估真實每坪單價！透過本機即可一秒還原純房屋每坪淨單價。
+             </p>
+             <div class="field-row">
+                 <div class="form-field">
+                     <label class="field-label">成交總價 (含車位, 萬元)</label>
+                     <input type="number" id="split_deal_price" class="input-styled" value="2200" oninput="calcParkingNetPrice()">
+                 </div>
+                 <div class="form-field">
+                     <label class="field-label">登記總坪數 (含車位, 坪)</label>
+                     <input type="number" id="split_total_ping" class="input-styled" value="46.5" step="0.1" oninput="calcParkingNetPrice()">
+                 </div>
+             </div>
+             <div class="field-row">
+                 <div class="form-field">
+                     <label class="field-label">車位價格 (萬元)</label>
+                     <input type="number" id="split_parking_price" class="input-styled" value="200" oninput="calcParkingNetPrice()">
+                 </div>
+                 <div class="form-field">
+                     <label class="field-label">車位登記坪數 (坪)</label>
+                     <input type="number" id="split_parking_ping" class="input-styled" value="10.5" step="0.1" oninput="calcParkingNetPrice()">
+                 </div>
+             </div>
+         </div>
+
+         <div style="background: var(--c-bg-canvas); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-sm); padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+             <div>
+                 <div style="font-size: 0.76rem; color: var(--c-text-dim); text-transform: uppercase;">單價拆算還原核心指標</div>
+                 <div style="margin-top: 14px;">
+                     <div style="font-size: 0.84rem; color: var(--c-text-muted);">未拆車位之帳面單價 (虛胖拉低)：</div>
+                     <div style="font-size: 1.15rem; font-weight: 700; color: #94A3B8; font-family: var(--font-mono); text-decoration: line-through;" id="split_out_raw_unit">47.31 萬元 / 坪</div>
+                 </div>
+                 <div style="margin-top: 12px; padding: 12px; background: rgba(197, 160, 89, 0.08); border: 1px solid var(--c-brass-border); border-radius: var(--radius-xs);">
+                     <div style="font-size: 0.84rem; color: #DFC07A; font-weight: 700;">拆算後真實純房屋每坪淨單價：</div>
+                     <div style="font-size: 1.7rem; font-weight: 900; color: #FFFFFF; font-family: var(--font-mono); margin-top: 2px;" id="split_out_real_unit">55.56 萬元 / 坪</div>
+                     <div style="font-size: 0.82rem; font-weight: 800; margin-top: 4px;" id="split_out_diff">真實單價拉高 +8.25 萬/坪 (+17.4%)</div>
+                 </div>
+             </div>
+             <div style="margin-top: 14px; font-size: 0.82rem; color: var(--c-text-muted); border-top: 1px solid var(--c-border-hairline); padding-top: 10px;">
+                 <span>純房屋價值總計：</span>
+                 <strong style="color: #34D399;" id="split_out_house_val">NT$ 20,000,000 (純房屋 36.0 坪)</strong>
+             </div>
+         </div>
+     </div>
+ </section>
+
+
+ <!-- 三大旗艦智庫引導卡 (3 Flagship Hub Cards: ROI + Tax + Notes) -->
+        <div style="margin: 40px 0 20px;">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div style="font-size: 0.82rem; font-weight: 700; color: #DFC07A; letter-spacing: 1.5px; text-transform: uppercase;">
+                    FLAGSHIP SUITES ‧ 全方位不動產決策智庫
+                </div>
+                <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #FFFFFF; margin-top: 6px;">
+                    依您的需求，探索專屬精算與實務智庫
+                </h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+                <!-- 卡片 1：置產獲利 ＆ 脫手決策 -->
+                <div style="background: linear-gradient(135deg, #11161B 0%, #171E28 100%); border: 1px solid var(--c-brass-border); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-smooth); box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
+                    <div>
+                        <div style="font-size: 0.78rem; font-weight: 800; color: #DFC07A; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
+                            DECISION SUITE ‧ 置產獲利決策
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF; margin-bottom: 10px;">
+                            置產獲利 ＆ 最佳脫手決策精算
+                        </h4>
+                        <p style="color: var(--c-text-muted); font-size: 0.86rem; line-height: 1.65; margin-bottom: 18px;">
+                            計算「怎麼操作賺最多、持有幾年賣掉落袋最豐厚」。整合以租養房現金流、自住設籍400萬免稅、1~10年脫手甜蜜點與3大策略沙盤推演。
+                        </p>
+                    </div>
+                    <a href="roi.html" class="btn-export-excel" style="text-decoration: none; text-align: center; display: block; padding: 10px 16px; font-size: 0.88rem; font-weight: 800; background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; border-radius: 6px;">
+                        前往【置產獲利 ＆ 脫手決策】→
+                    </a>
+                </div>
+
+                <!-- 卡片 2：地政稅務精算 -->
+                <div style="background: linear-gradient(135deg, #11161B 0%, #151F24 100%); border: 1px solid rgba(52, 211, 153, 0.35); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-smooth); box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
+                    <div>
+                        <div style="font-size: 0.78rem; font-weight: 800; color: #34D399; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
+                            TAX & ESCROW ‧ 八大地政稅務
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF; margin-bottom: 10px;">
+                            地政稅務 ＆ 產權精算旗艦工作台
+                        </h4>
+                        <p style="color: var(--c-text-muted); font-size: 0.86rem; line-height: 1.65; margin-bottom: 18px;">
+                            提供房地合一2.0階梯稅率、土地法34-1共有物處分提存法院對價、遺產繼承應繼分/特留分、傳承三途徑PK與危老1.4倍容積等8大工具。
+                        </p>
+                    </div>
+                    <a href="tax.html" class="btn-export-excel" style="text-decoration: none; text-align: center; display: block; padding: 10px 16px; font-size: 0.88rem; font-weight: 800; background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; border-radius: 6px;">
+                        進入【地政稅務精算工作台】→
+                    </a>
+                </div>
+
+                <!-- 卡片 3：代書實務筆記 ＆ QA -->
+                <div style="background: linear-gradient(135deg, #11161B 0%, #1C1928 100%); border: 1px solid rgba(167, 139, 250, 0.35); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-smooth); box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
+                    <div>
+                        <div style="font-size: 0.78rem; font-weight: 800; color: #A78BFA; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
+                            KNOWLEDGE BASE ‧ 實務避坑寶典
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF; margin-bottom: 10px;">
+                            代書實務避坑筆記 ＆ QA 智庫
+                        </h4>
+                        <p style="color: var(--c-text-muted); font-size: 0.86rem; line-height: 1.65; margin-bottom: 18px;">
+                            收錄資深地政士、會計師在買賣簽約、房地合一2年重稅豁免、自住重購退稅5年列管與共有物存證信函合法送達等實戰避坑關鍵。
+                        </p>
+                    </div>
+                    <a href="notes.html" class="btn-export-excel" style="text-decoration: none; text-align: center; display: block; padding: 10px 16px; font-size: 0.88rem; font-weight: 800; background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); color: #FFFFFF; border-radius: 6px;">
+                        查閱【代書實務避坑智庫】→
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google AdSense 合規自適應展示廣告單元 (符合 Better Ads 廣告標準規範) -->
+        <div class="ad-container-wrapper" style="margin: 30px auto 10px; text-align: center; max-width: 1120px; background: rgba(11, 19, 43, 0.45); border: 1px dashed rgba(223, 192, 122, 0.3); border-radius: var(--radius-sm); padding: 14px 10px;">
+            <!-- Google AdSense 手動廣告單元插槽 (已通過官方審核，取得專屬 10 位數 data-ad-slot 後解除註解啟用)
+        <div style="font-size: 0.7rem; color: #94A3B8; letter-spacing: 1px; margin-bottom: 8px;">— 贊助商廣告 ‧ SPONSORED —</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1157627714001948"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        -->
+        </div>
+
+        </main>
+
+  <!-- 贊助支持彈窗 Modal -->
+ <!-- 贊助支持彈窗 Modal (純公益隨喜請喝咖啡 ‧ 零客服負擔 ‧ 全功能直接免費使用) -->
+ <!-- 贊助支持彈窗 Modal (純自願隨喜請喝咖啡 ‧ 零法律糾紛 ‧ 零客服負擔 ‧ 全功能直接免費使用) -->
+ <div id="sponsorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
+     <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 480px; width: 92%; text-align: center; box-shadow: var(--shadow-elevated);">
+         <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--c-brass-muted); color: var(--c-brass-light); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 14px; border: 1px solid var(--c-brass-border);">
+             ☕
+         </div>
+         <h3 style="color: #FFFFFF; font-size: 1.35rem; font-weight: 800; font-family: var(--font-serif); margin-bottom: 6px;">請開發與維運團隊喝杯咖啡</h3>
+         <p style="color: var(--c-text-muted); font-size: 0.84rem; margin-bottom: 14px; line-height: 1.6;">
+             VANDORA 堅持<strong>全功能 100% 開放免費使用、無付費牆、免註冊登入</strong>。所有 Excel 旗艦試算報告、簽約水單與法規精算皆可在瀏覽器直接免費一鍵匯出！
+         </p>
+
+         <!-- 隨喜利他理念說明卡 -->
+         <div style="background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 0.82rem; line-height: 1.6; color: #E2E8F0; margin-bottom: 14px;">
+             <strong style="color: #DFC07A; display: block; margin-bottom: 4px;">🌿 隨喜支持 ‧ 讓專業工具持續開源運作：</strong>
+             若本工具在您買賣房屋、地政簽約、資產傳承或申報房產稅時，為您避開了法規地雷、精準省下了數萬元的代書費與重稅，歡迎自由隨喜請工程團隊喝杯咖啡（NT$ 50 ~ 200 元隨喜），補貼每週自動同步內政部開放資料之雲端伺服器頻寬！
+         </div>
+
+         <!-- 銀行帳戶與多元轉帳 -->
+         <div style="background: #0A0D10; border: 1px solid var(--c-border-subtle); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; text-align: left;">
+             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                 <span style="font-size: 0.78rem; color: var(--c-text-dim);">國泰世華商業銀行 (代碼 013) ｜ 戶名：胡女士</span>
+                 <span style="font-size: 0.72rem; color: #34D399; background: rgba(52, 211, 153, 0.15); padding: 1px 6px; border-radius: 4px;">支援各大網銀/ATM</span>
+             </div>
+
+ <!-- Cookie 告知橫幅 (Cookie Consent Banner) -->
+ <div id="cookieBanner" class="cookie-consent-banner" style="display: none;">
+ <div class="cookie-consent-text">
+ <strong>Cookie 與第三方廣告服務告知：</strong>本網站使用 Cookie 與 Google AdSense 技術以確保系統穩定運作、評估流量與提供相關內容。繼續瀏覽即代表您同意本站之 Cookie 應用政策。
+ </div>
+ <div class="cookie-consent-actions">
+ <button type="button" class="btn-cookie-privacy" onclick="openPrivacyModal()">隱私權條款</button>
+ <button type="button" class="btn-cookie-accept" onclick="acceptCookieConsent()">同意並接受</button>
+ </div>
+ </div>
+
+ <!-- 隱私權政策與 Cookie 條款彈窗 Modal (Google AdSense 審核必備) -->
+ <div id="privacyModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
+ <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 640px; width: 92%; text-align: left; box-shadow: var(--shadow-elevated);">
+ <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--c-border-hairline); padding-bottom: 14px;">
+ <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 800; font-family: var(--font-serif); margin: 0; display: flex; align-items: center; gap: 8px;">
+ 隱私權政策 ＆ Cookie 使用聲明
+ </h3>
+ <button type="button" onclick="closePrivacyModal()" style="background: none; border: none; color: #94A3B8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+ </div>
+ 
+ <div class="privacy-body-scroll">
+ <h4>一、個人資料保護原則</h4>
+ <p>本系統（VANDORA）尊重並保護每位使用者的隱私。所有房屋市值試算、土地行情與地政稅務精算均在使用者瀏覽器端本機即時運算完成，本站不會主動儲存或對外洩漏您的資產數據。</p>
+
+ <h4>二、Google AdSense 廣告與第三方 Cookie 宣告</h4>
+ <p>本網站使用 Google AdSense 廣告發布商服務（發布商 ID：<code>ca-pub-1157627714001948</code>）。Google 作為第三方廣告供應商，會使用 Cookie（包括 DoubleClick DART Cookie）根據您造訪本網站及其他網站的歷史紀錄投放相關廣告。</p>
+ <ul>
+ <li>使用者得隨時造訪 <a href="https://www.google.com/settings/ads" target="_blank" style="color: #60A5FA;">Google 廣告設定</a> 停用個人化廣告。</li>
+ <li>若您不希望第三方供應商使用 Cookie 投放廣告，亦可前往 <a href="https://www.aboutads.info" target="_blank" style="color: #60A5FA;">AboutAds.info</a> 退出。</li>
+ </ul>
+
+ <h4>三、網站流量分析與效能優化</h4>
+ <p>本站可能透過匿名化分析技術記錄造訪次數、熱門功能與停留時間，以持續優化全能地政試算工具之運算效能。</p>
+
+ <h4>四、免責聲明</h4>
+ <p>本系統各項實價登錄行情與稅務試算均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
+ </div>
+
+ <div style="text-align: right;">
+ <button type="button" onclick="closePrivacyModal()" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; font-weight: 800; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer;">
+ 我已充分了解並關閉
+ </button>
+ </div>
+ </div>
+ </div>
+
+
+             <div style="color: var(--c-brass-light); font-weight: 800; font-size: 1.15rem; letter-spacing: 1px; font-family: var(--font-mono); margin-bottom: 6px;">
+                 帳號：007506098097
+             </div>
+             <div style="font-size: 0.74rem; color: #94A3B8; line-height: 1.5;">
+                 💡 跨行轉帳小撇步：使用 <strong>街口支付 / 台灣 Pay / LINE Pay / 各家網銀</strong> 通常享有每月跨行免手續費優惠！
+             </div>
+         </div>
+
+         <!-- 零糾紛 ‧ 無對價免責聲明 (防糾紛必備法律保障條款) -->
+         <div style="background: rgba(0, 0, 0, 0.4); border: 1px dashed rgba(148, 163, 184, 0.35); border-radius: 6px; padding: 8px 12px; margin-bottom: 14px; text-align: left; font-size: 0.74rem; color: #94A3B8; line-height: 1.5;">
+             <strong style="color: #CBD5E1;">⚖️ 【無償隨喜贊助聲明】：</strong>本贊助純屬自願性無償請喝咖啡性質（民法第406條無償贈與），無任何商品販售、無實體或數位禮包、無人工對帳或後續寄送義務。本站全功能永久免費，不贊助亦可 100% 自由使用與匯出報告，絕無任何強制或對價關係。感謝您的認同與暖心鼓勵！
+         </div>
+
+         <!-- 操作按鈕群 (零維護、零承諾負擔) -->
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
+             <button type="button" onclick="copySponsorAccount()" style="background: linear-gradient(135deg, #C5A059 0%, #A88134 100%); color: #0A0D10; font-weight: 800; font-size: 0.84rem; border: none; padding: 11px; border-radius: 6px; cursor: pointer;">
+                 複製帳號 (00750...)
+             </button>
+             <button type="button" onclick="copySponsorBankCode()" style="background: rgba(197, 160, 89, 0.2); border: 1px solid var(--c-brass-gold); color: #DFC07A; font-weight: 800; font-size: 0.84rem; padding: 11px; border-radius: 6px; cursor: pointer;">
+                 複製銀行代碼 (013)
+             </button>
+         </div>
+         <button type="button" onclick="closeSponsorModal()" style="width: 100%; background: var(--c-bg-surface-elevated); color: #94A3B8; font-weight: 600; font-size: 0.82rem; border: 1px solid var(--c-border-subtle); padding: 9px; border-radius: 6px; cursor: pointer;">
+             關閉視窗
+         </button>
+     </div>
+ </div>
+
+ <!-- 頁尾 Footer -->
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-nav">
+ <a href="index.html">全台房價估價</a>
+ <a href="index.html">土地行情查詢</a>
+ <a href="tax.html">地政稅務精算</a>
+ <a href="tax.html#workbench">房地合一2.0</a>
+ <a href="tax.html#workbench">共有土地34-1</a>
+ <a href="notes.html">代書實務筆記 ＆ QA</a>
+ <a href="about.html">關於我們 ＆ 顧問團隊</a>
+ <a href="about.html#disclaimer">免責聲明</a>
+ <a href="about.html#contact">專案諮詢</a>
+ <a href="privacy.html">隱私權政策 ＆ Cookie 宣告</a>
+ </div>
+ <p style="margin-bottom: 8px;">© <span id="currentYearFooter"></span> VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 全國不動產稅務與建築土地全能精算系統</p>
+ <p style="font-size: 0.76rem; color: var(--c-text-dim);">免責聲明：本系統各項實價登錄行情與試算結果均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
+ </div>
+ </footer>
+
+ <!-- Scripts: 依序載入實價登錄大數據庫與計算引擎 -->
+ <script src="data/taiwan_districts_data.js?v=2026.W40"></script>
+ <script src="js/calculator.js?v=2026.W40"></script>
+ <script>
+ document.getElementById('currentYearFooter').innerText = new Date().getFullYear();
+ function openSponsorModal() {
+ document.getElementById('sponsorModal').style.display = 'flex';
+ }
+ function closeSponsorModal() {
+ document.getElementById('sponsorModal').style.display = 'none';
+ }
+ function copySponsorAccount() {
+ navigator.clipboard.writeText('007506098097').then(() => {
+ alert('國泰世華銀行帳號 007506098097 已複製至剪貼簿！感謝您的支持！');
+ });
+ }
+ </script>
+
+    <!-- 手機與桌機置頂浮動試算速覽 (Sticky Summary Bar) -->
+    <div id="stickyValuationBar" class="sticky-val-bar">
+        <div class="sticky-val-container">
+            <div class="sticky-val-info">
+                <span class="sticky-label">預估公允總價：</span>
+                <span class="sticky-total" id="sticky_val_total">NT$ 0</span>
+                <span class="sticky-unit" id="sticky_val_unit">0 萬/坪</span>
+            </div>
+            <div class="sticky-val-actions">
+                <button type="button" onclick="copyShareSummary('valuation')" class="btn-sticky-line">
+                     複製LINE速報
+                </button>
+                <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-sticky-top">
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

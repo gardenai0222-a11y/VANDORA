@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANDORA ‧ 置產獲利 ＆ 脫手決策 ｜ 全生命週期收租利息現金流與最佳出場年限精算</title>
+    <meta name="description" content="VANDORA 買房置產財務效益與脫手決策智庫：精算以租養房現金流、1~10年AI最佳脫手獲利光譜、三大置產策略PK與同預算標的比較。支援專屬 Excel 精算單下載與 LINE 一鍵分享。">
+    <meta name="keywords" content="置產獲利試算, 以租養房現金流, 房產最佳脫手年限, 買房IRR投資報酬率, 房地合一自住免稅, 買房出租利息覆蓋率">
+    <meta name="author" content="VANDORA 置產決策顧問團隊">
+    <link rel="canonical" href="https://gardenai0222-a11y.github.io/VANDORA/roi.html">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="VANDORA 房產估價與稅務智庫">
+    <meta property="og:title" content="VANDORA ‧ 置產獲利 ＆ 脫手決策 ｜ 全生命週期收租利息與最佳脫手年限">
+    <meta property="og:description" content="買房置產必備！以租養房現金流、AI最佳脫手獲利光譜與三大策略橫向PK。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gardenai0222-a11y.github.io/VANDORA/roi.html">
+    <meta property="og:image" content="https://gardenai0222-a11y.github.io/VANDORA/assets/vandora_logo.png">
+    <meta property="og:locale" content="zh_TW">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VANDORA 置產獲利 ＆ 脫手決策智庫">
+    <meta name="twitter:description" content="買房置產財務效益與脫手年限全生命週期精算。">
+    <meta name="twitter:image" content="https://gardenai0222-a11y.github.io/VANDORA/assets/vandora_logo.png">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1157627714001948" crossorigin="anonymous"></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "VANDORA 置產獲利 ＆ 脫手決策智庫",
+      "url": "https://gardenai0222-a11y.github.io/VANDORA/roi.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "買房置產如何精算以租養房的現金流與利息覆蓋率？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "以租養房的核心關鍵在於「淨租金收入能否打平或覆蓋房貸利息支出」。當淨租金（租金扣除管理費、維護修繕與稅負）大於每月房貸利息時，利息覆蓋率即大於 100%，代表房客正在實質替您負擔融資成本與養大房屋淨值。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "買房置產最佳脫手年限是幾年？為什麼 5~6 年是黃金出場甜蜜點？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在台灣所得稅法房地合一 2.0 制下，持有滿 5 年房地合一稅率從 35% 大幅跳降至 20%；若設籍自住滿 6 年更享有 400 萬元免稅額＋超過部分 10% 優惠稅率。搭配前幾年的資產增值波段與租金累積，5~6 年往往是年化內部報酬率（IRR）與稅後淨利落袋的最佳黃金甜蜜點。"
+          }
+        }
+      ]
+    }
+    </script>
+
+</head>
+<body>
+
+        <!-- 頂級雙層典雅導覽列 (Precision Navbar) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/vandora_icon.png" alt="VANDORA Logo" class="brand-logo-img">
+                <div class="brand-titles">
+                    <span class="brand-name">VANDORA</span>
+                    <span class="brand-sub">開拓 ‧ 落地 ‧ 富饒 ｜ 房產估價與稅務專家</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="index.html">房產估價與行情</a></li>
+                <li><a href="roi.html" class="active">置產獲利 ＆ 脫手決策</a></li>
+                <li><a href="tax.html">地政稅務精算</a></li>
+                <li><a href="notes.html">代書實務筆記 ＆ QA</a></li>
+                <li><a href="javascript:void(0)" onclick="openSponsorModal()" class="btn-gold-action">贊助支持</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburgerBtn" style="font-size: 0.85rem; font-weight: 700; color: #DFC07A; border: 1px solid var(--c-border-subtle); padding: 5px 12px; border-radius: 4px; cursor: pointer;">選單</div>
+        </div>
+    </header>
+
+        <!-- 頁首 Editorial Hero Header (Standardized Across All 5 Pages) -->
+    <section class="hero-editorial">
+        <div class="container">
+            <div class="hero-tag">
+                DECISION SUITE ‧ 買房獲利極大化決策智庫
+            </div>
+            <h1 class="hero-headline">
+                置產獲利、以租養房現金流 ＆ 最佳脫手年限<br>
+                <span>「VANDORA 買房置產獲利 ＆ 脫手決策精算智庫」</span>
+            </h1>
+            <p class="hero-subhead">
+                不只算現金流，更幫您精算「怎麼操作賺最多、持有幾年賣掉落袋最豐厚」。深度整合以租養房租金覆蓋率、新青安 40 年房貸、設籍自住 400 萬免稅、1~10 年脫手黃金甜蜜點與三大置產策略沙盤推演。
+            </p>
+        <!-- 房仲代書顧問名片自訂區 -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px; padding: 12px 18px; background: rgba(11, 19, 43, 0.75); border: 1px solid var(--c-border-hairline); border-radius: var(--radius-sm); max-width: 1120px; margin-left: auto; margin-right: auto;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                    
+                    <span style="font-size: 0.82rem; color: var(--c-brass-light); font-weight: 700;">房仲 / 代書顧問自訂名片抬頭：</span>
+                </div>
+                <input type="text" class="input-styled consultant-title-input" style="width: 280px; padding: 5px 10px; font-size: 0.82rem; background: rgba(0,0,0,0.4);" placeholder="例：永慶房屋 大安旗艦店 林專員 0912-345-678" oninput="saveConsultantTitle()">
+            </div>
+            <div style="font-size: 0.78rem; color: var(--c-text-dim);">
+                 建議按 <strong>Ctrl+D</strong> 加入書籤，隨時掌握置產決策
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 主工作台：買房置產與獲利精算 -->
+    <main class="workbench-container" style="max-width: 1320px; margin: 0 auto; padding: 30px 20px;">
+        <div class="calc-grid-2col">
+            <!-- 左欄：參數輸入與情境設定 -->
+            <div class="control-panel-card">
+                <div class="panel-header">
+                    <span class="panel-title">買房置產投資 ＆ 全生命週期參數設定</span>
+                    <span class="mode-tag" style="background: rgba(223, 192, 122, 0.15); color: #DFC07A; border: 1px solid rgba(223, 192, 122, 0.3); padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 800;">自住 / 以租養房雙軌</span>
+                </div>
+
+                <!-- 預設情境快捷按鈕 -->
+                <div style="margin-bottom: 20px;">
+                    <div style="font-size: 0.8rem; color: var(--c-text-muted); margin-bottom: 8px;">點擊一鍵套用經典投資情境：</div>
+                    <div class="preset-group">
+                        <div class="preset-btn active" id="preset_rent" onclick="applyRoiPreset('rent_growth')">
+                            <span class="preset-title">以租養房包租公</span>
+                            <span class="preset-subtitle">打平利息 ‧ 滾動現金流</span>
+                        </div>
+                        <div class="preset-btn" id="preset_self" onclick="applyRoiPreset('self_growth')">
+                            <span class="preset-title">首購自住設籍</span>
+                            <span class="preset-subtitle">新青安40年 ‧ 400萬免稅</span>
+                        </div>
+                        <div class="preset-btn" id="preset_long" onclick="applyRoiPreset('long_hold')">
+                            <span class="preset-title">長線置產抗通膨</span>
+                            <span class="preset-subtitle">持有10年 ‧ 享受大週期</span>
+                        </div>
+                        <div class="preset-btn" id="preset_flip" onclick="applyRoiPreset('short_flip')">
+                            <span class="preset-title">中短期增值換屋</span>
+                            <span class="preset-subtitle">自住重購退稅 ‧ 靈活出場</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. 預計買進房屋總價 (Slider + Stepper) -->
+                <div class="form-field">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="field-label">預計買進房屋總價 (萬元)</label>
+                        <span id="roi_buy_price_badge" style="font-family: var(--font-mono); font-weight: 800; color: #DFC07A; font-size: 0.95rem;">2,200 萬元</span>
+                    </div>
+                    <div class="slider-input-row">
+                        <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_buy_price', -50)">-</button>
+                        <input type="number" id="roi_buy_price" class="input-styled" value="2200" step="50" oninput="syncRoiSlider('roi_buy_price', 'roi_buy_price_range'); calcRoiAnalysis();">
+                        <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_buy_price', 50)">+</button>
+                    </div>
+                    <input type="range" id="roi_buy_price_range" class="range-slider-styled" min="300" max="8000" step="50" value="2200" oninput="syncRoiInput('roi_buy_price_range', 'roi_buy_price'); calcRoiAnalysis();">
+                    <div class="quick-pill-group">
+                        <span class="quick-pill" onclick="setRoiVal('roi_buy_price', 1000)">1,000萬 (首購小宅)</span>
+                        <span class="quick-pill" onclick="setRoiVal('roi_buy_price', 1500)">1,500萬 (新青安標準)</span>
+                        <span class="quick-pill" onclick="setRoiVal('roi_buy_price', 2200)">2,200萬 (都會三房)</span>
+                        <span class="quick-pill" onclick="setRoiVal('roi_buy_price', 3500)">3,500萬 (高資產置產)</span>
+                    </div>
+                </div>
+
+                <!-- 2. 自備款成數 ＆ 初期稅費 -->
+                <div class="field-row">
+                    <div class="form-field">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label class="field-label">自備款成數 (%)</label>
+                            <span id="roi_down_pct_badge" style="color: #34D399; font-weight: 800; font-family: var(--font-mono);">20 %</span>
+                        </div>
+                        <div class="slider-input-row">
+                            <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_down_pct', -5)">-</button>
+                            <input type="number" id="roi_down_pct" class="input-styled" value="20" min="10" max="50" step="5" oninput="syncRoiSlider('roi_down_pct', 'roi_down_pct_range'); calcRoiAnalysis();">
+                            <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_down_pct', 5)">+</button>
+                        </div>
+                        <input type="range" id="roi_down_pct_range" class="range-slider-styled" min="10" max="50" step="5" value="20" oninput="syncRoiInput('roi_down_pct_range', 'roi_down_pct'); calcRoiAnalysis();">
+                        <div class="quick-pill-group">
+                            <span class="quick-pill" onclick="setRoiVal('roi_down_pct', 15)">15%</span>
+                            <span class="quick-pill" onclick="setRoiVal('roi_down_pct', 20)">20% (首購2成)</span>
+                            <span class="quick-pill" onclick="setRoiVal('roi_down_pct', 30)">30% (換屋3成)</span>
+                            <span class="quick-pill" onclick="setRoiVal('roi_down_pct', 40)">40% (多戶4成)</span>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">初期稅費 ＆ 裝潢準備金 (萬元)</label>
+                        <input type="number" id="roi_initial_cost" class="input-styled" value="80" oninput="calcRoiAnalysis()">
+                        <span class="field-tip" style="display:block; margin-top: 4px;">含契稅、代書規費、裝潢與家具</span>
+                    </div>
+                </div>
+
+                <!-- 3. 房貸年期 ＆ 年利率 -->
+                <div class="field-row">
+                    <div class="form-field">
+                        <label class="field-label">房貸貸款年期</label>
+                        <select id="roi_loan_years" class="select-styled" onchange="calcRoiAnalysis()">
+                            <option value="20">20 年期 (240 期 - 本利速還)</option>
+                            <option value="30" selected>30 年期 (360 期 - 市場主流)</option>
+                            <option value="40">40 年期 (480 期 - 新青安極致槓桿)</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">房貸年利率 (%)</label>
+                        <input type="number" step="0.001" id="roi_loan_rate" class="input-styled" value="2.185" oninput="calcRoiAnalysis()">
+                    </div>
+                </div>
+
+                <!-- 4. 寬限期 ＆ 營運模式 -->
+                <div class="field-row">
+                    <div class="form-field">
+                        <label class="field-label">房貸寬限期 (年 - 僅繳息)</label>
+                        <select id="roi_grace_years" class="select-styled" onchange="calcRoiAnalysis()">
+                            <option value="0">0 年 (無寬限期 ‧ 立即本利還款)</option>
+                            <option value="3" selected>3 年寬限期 (以租養房甜蜜期)</option>
+                            <option value="5">5 年最長寬限期 (新青安上限)</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">房屋營運模式</label>
+                        <select id="roi_usage_mode" class="select-styled" onchange="toggleRoiUsageMode()">
+                            <option value="rent" selected>買進收租 (以租養房 ‧ 租金打平利息)</option>
+                            <option value="self">自住兼置產增值 (設籍滿6年享400萬免稅)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 5. 租金收益設定區塊 (收租模式專屬) -->
+                <div id="roi_rent_box">
+                    <div class="field-row">
+                        <div class="form-field">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <label class="field-label">預估每月租金收入 (元)</label>
+                                <span id="roi_monthly_rent_badge" style="color: #60A5FA; font-weight: 800; font-family: var(--font-mono);">28,000 元</span>
+                            </div>
+                            <div class="slider-input-row">
+                                <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_monthly_rent', -1000)">-</button>
+                                <input type="number" id="roi_monthly_rent" class="input-styled" value="28000" step="1000" oninput="syncRoiSlider('roi_monthly_rent', 'roi_monthly_rent_range'); calcRoiAnalysis();">
+                                <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_monthly_rent', 1000)">+</button>
+                            </div>
+                            <input type="range" id="roi_monthly_rent_range" class="range-slider-styled" min="10000" max="150000" step="1000" value="28000" oninput="syncRoiInput('roi_monthly_rent_range', 'roi_monthly_rent'); calcRoiAnalysis();">
+                        </div>
+                        <div class="form-field">
+                            <label class="field-label">每月大樓管理費 ＆ 雜支 (元)</label>
+                            <input type="number" id="roi_monthly_exp" class="input-styled" value="2500" oninput="calcRoiAnalysis()">
+                            <span class="field-tip" style="display:block; margin-top: 4px;">由房東負擔之物業管理或維護費</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. 標的地段選擇 ＆ AI 實價歷史年化增值率 ＆ 未來利多加權引擎 -->
+                <div class="district-growth-card">
+                    <div class="district-growth-header">
+                        <div class="district-growth-title">
+                            標的地段 ＆ 實價歷史成長率大數據
+                        </div>
+                        <span class="district-hist-badge" id="roi_hist_growth_badge">歷史基準：+4.2% / 年</span>
+                    </div>
+                    
+                    <div class="field-row" style="margin-bottom: 8px;">
+                        <div class="form-field" style="margin-bottom: 0;">
+                            <label class="field-label">房屋所在縣市</label>
+                            <select id="roi_city" class="select-styled" onchange="updateRoiDistricts(); updateRoiDistrictGrowth();">
+                                <option value="台北市">台北市</option>
+                                <option value="新北市" selected>新北市</option>
+                                <option value="桃園市">桃園市</option>
+                                <option value="台中市">台中市</option>
+                                <option value="台南市">台南市</option>
+                                <option value="高雄市">高雄市</option>
+                                <option value="新竹縣">新竹縣</option>
+                                <option value="新竹市">新竹市</option>
+                                <option value="基隆市">基隆市</option>
+                                <option value="宜蘭縣">宜蘭縣</option>
+                                <option value="苗栗縣">苗栗縣</option>
+                                <option value="彰化縣">彰化縣</option>
+                                <option value="南投縣">南投縣</option>
+                                <option value="雲林縣">雲林縣</option>
+                                <option value="嘉義縣">嘉義縣</option>
+                                <option value="嘉義市">嘉義市</option>
+                                <option value="屏東縣">屏東縣</option>
+                                <option value="花蓮縣">花蓮縣</option>
+                                <option value="台東縣">台東縣</option>
+                                <option value="澎湖縣">澎湖縣</option>
+                                <option value="金門縣">金門縣</option>
+                                <option value="連江縣">連江縣</option>
+                            </select>
+                        </div>
+                        <div class="form-field" style="margin-bottom: 0;">
+                            <label class="field-label">行政區</label>
+                            <select id="roi_dist" class="select-styled" onchange="updateRoiDistrictGrowth();">
+                                <option value="板橋區" selected>板橋區</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 重大未來建設利多勾選 (Future Growth Catalysts) -->
+                    <div style="font-size: 0.78rem; font-weight: 700; color: #CBD5E1; margin-top: 10px;">
+                        未來重大建設利多加權 (未反映於過往實價)：
+                    </div>
+                    <div class="catalysts-checklist">
+                        <label class="catalyst-item">
+                            <input type="checkbox" id="cat_transport" onchange="calcRoiGrowthFromCatalysts()">
+                            <div class="catalyst-text">
+                                <span>軌道交通 (捷運/高鐵/輕軌)</span>
+                                <span class="catalyst-boost">+1.2%</span>
+                            </div>
+                        </label>
+                        <label class="catalyst-item">
+                            <input type="checkbox" id="cat_tech" onchange="calcRoiGrowthFromCatalysts()">
+                            <div class="catalyst-text">
+                                <span>科技產業 (半導體/園區/AI)</span>
+                                <span class="catalyst-boost">+2.0%</span>
+                            </div>
+                        </label>
+                        <label class="catalyst-item">
+                            <input type="checkbox" id="cat_mall" onchange="calcRoiGrowthFromCatalysts()">
+                            <div class="catalyst-text">
+                                <span>大型商場 (LaLaport/Costco)</span>
+                                <span class="catalyst-boost">+0.8%</span>
+                            </div>
+                        </label>
+                        <label class="catalyst-item">
+                            <input type="checkbox" id="cat_redevelop" onchange="calcRoiGrowthFromCatalysts()">
+                            <div class="catalyst-text">
+                                <span>公辦重劃 (新重劃區/新市鎮)</span>
+                                <span class="catalyst-boost">+1.2%</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 公式即時換算條 -->
+                    <div class="growth-formula-bar">
+                        <span id="roi_growth_formula_text">公式：歷史基準 +4.2% ＋ 利多加權 +0.0%</span>
+                        <span style="font-weight: 800; color: #DFC07A;" id="roi_growth_final_text">= 預估 +4.2% / 年</span>
+                    </div>
+                </div>
+
+                <!-- 7. 持有年限 ＆ 預期年增值率 (自動算定 ＆ 支援微調) -->
+                <div class="field-row">
+                    <div class="form-field">
+                        <label class="field-label">預計持有年限 (年)</label>
+                        <select id="roi_hold_years" class="select-styled" onchange="calcRoiAnalysis()">
+                            <option value="2">持有 2 年 (房地合一稅 45% - 短線)</option>
+                            <option value="3">持有 3 年 (房地合一稅 35%)</option>
+                            <option value="5" selected>持有 5 年 (房地合一稅 20% - 穩健)</option>
+                            <option value="6">持有 6 年 (自住設籍滿6年 400萬免稅)</option>
+                            <option value="10">持有 10 年 (長線翻倍享受大週期)</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label class="field-label">最終採用年化增值率 (%)</label>
+                            <span id="roi_appreciation_badge" style="color: #DFC07A; font-weight: 800; font-family: var(--font-mono);">+4.2 % / 年</span>
+                        </div>
+                        <div class="slider-input-row">
+                            <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_appreciation_rate', -0.5)">-</button>
+                            <input type="number" step="0.1" id="roi_appreciation_rate" class="input-styled" value="4.2" oninput="syncRoiSlider('roi_appreciation_rate', 'roi_appreciation_rate_range'); calcRoiAnalysis();">
+                            <button type="button" class="stepper-btn" onclick="stepRoiValue('roi_appreciation_rate', 0.5)">+</button>
+                        </div>
+                        <input type="range" id="roi_appreciation_rate_range" class="range-slider-styled" min="1.0" max="15.0" step="0.5" value="4.2" oninput="syncRoiInput('roi_appreciation_rate_range', 'roi_appreciation_rate'); calcRoiAnalysis();">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右欄：置產投資全生命週期獲利評估水單 (Visual Evaluation Statement) -->
+            <div class="statement-card">
+                <div>
+                    <div class="watermark-header">
+                        <div class="watermark-title">買房置產財務效益 ＆ 淨利精算單</div>
+                        <div class="watermark-date">現金流覆蓋 ＆ 資本利得稅後落袋淨額精算</div>
+                    </div>
+
+                    <!-- 1. 三大核心落袋指標卡 (三大頂部數據) -->
+                    <div class="roi-hero-trio">
+                        <div class="hero-stat-card">
+                            <div class="stat-lbl">稅後實拿純利潤</div>
+                            <div class="stat-main-num" id="roi_out_net_profit" style="color: #34D399;">+NT$ 0</div>
+                            <div class="stat-sub-desc">扣除所有利息與稅費純獲利</div>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="stat-lbl">實質年化報酬率</div>
+                            <div class="stat-main-num" id="roi_out_annualized_roi" style="color: #DFC07A;">+0.0 % / 年</div>
+                            <div class="stat-sub-desc" id="roi_out_total_roi_sub">總投報率 +0.0%</div>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="stat-lbl">期末連本帶利領回</div>
+                            <div class="stat-main-num" id="roi_out_takeback" style="color: #FFFFFF;">NT$ 0</div>
+                            <div class="stat-sub-desc">本金 ＋ 落袋利潤總金額</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 土木技師白話解讀結論卡 -->
+                    <div class="executive-summary-card">
+                        <div class="exec-summary-title">財務效益白話解讀：</div>
+                        <div class="exec-summary-text" id="roi_exec_summary_text">
+                            計算中...
+                        </div>
+                    </div>
+
+                    <!-- 3. 以租養房租金安全儀表 -->
+                    <div class="cashflow-gauge-card">
+                        <div class="gauge-header-row">
+                            <span style="font-weight: 700; color: #FFFFFF; font-size: 0.85rem;">以租養房 ‧ 租金 vs 房貸利息安全儀表</span>
+                            <span class="health-status-badge health-status-green" id="roi_health_badge">現金流充裕</span>
+                        </div>
+                        <div class="gauge-bar-track">
+                            <div class="gauge-bar-fill" id="roi_coverage_bar" style="width: 79.6%; background: linear-gradient(90deg, #10B981, #34D399);"></div>
+                        </div>
+                        <div class="gauge-labels-row">
+                            <span>租金對利息覆蓋率：<strong id="roi_out_coverage_rate" style="color: #34D399;">79.6 %</strong></span>
+                            <span id="roi_out_monthly_cashflow_text">每月自付差額：<strong id="roi_out_monthly_cashflow" style="color: #F87171;">-NT$ 6,547 / 月</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- 4. 三階段清晰資金進出水單明細 -->
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin: 16px 0 8px; letter-spacing: 0.5px;">
+                        三階段資金進出水單明細
+                    </div>
+                    <div class="money-phase-container">
+                        <div class="money-phase-row">
+                            <span class="phase-tag p1">階段一 ‧ 進場投入</span>
+                            <span class="phase-content">自備款 ＋ 契稅裝潢代書雜支</span>
+                            <span class="phase-val" id="roi_out_initial_cash" style="color: #FFFFFF;">NT$ 0</span>
+                        </div>
+                        <div class="money-phase-row">
+                            <span class="phase-tag p2">階段二 ‧ 持有收租</span>
+                            <span class="phase-content" id="roi_phase2_desc">累計實收租金 ─ 累計房貸利息</span>
+                            <span class="phase-val" id="roi_phase2_net_val" style="color: #DFC07A;">NT$ 0</span>
+                        </div>
+                        <div class="money-phase-row">
+                            <span class="phase-tag p3">階段三 ‧ 期末賣出</span>
+                            <span class="phase-content" id="roi_phase3_desc">增值賣出總價 ─ 房地合一稅 ─ 仲介規費</span>
+                            <span class="phase-val" id="roi_phase3_val" style="color: #34D399;">NT$ 0</span>
+                        </div>
+                        <div class="money-phase-row phase-total">
+                            <span class="phase-tag p-tot">最終落袋</span>
+                            <span class="phase-content" style="font-weight: 800; color: #DFC07A;">期末扣除所有成本實拿總淨利</span>
+                            <span class="phase-val" id="roi_out_waterfall_final" style="color: #34D399; font-size: 1.1rem;">+NT$ 0</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. 投資效益對比天秤 (Asset Returns Comparison Matrix) -->
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin: 12px 0 6px; letter-spacing: 0.5px;">
+                        三大資產年化報酬率 PK 對比
+                    </div>
+                    <div class="roi-comparison-grid">
+                        <div class="roi-compare-box active-winner">
+                            <div style="font-size: 0.72rem; color: #DFC07A; font-weight: 700;">本案房產 (含槓桿)</div>
+                            <div style="font-size: 1.1rem; font-weight: 800; color: #34D399; font-family: var(--font-mono); margin: 2px 0;" id="roi_cmp_house">+14.8%</div>
+                            <div style="font-size: 0.68rem; color: #94A3B8;">租金+增值綜合IRR</div>
+                        </div>
+                        <div class="roi-compare-box">
+                            <div style="font-size: 0.72rem; color: #94A3B8;">台灣50 ETF (0050)</div>
+                            <div style="font-size: 1.1rem; font-weight: 800; color: #60A5FA; font-family: var(--font-mono); margin: 2px 0;">+7.5%</div>
+                            <div style="font-size: 0.68rem; color: #64748B;">歷史長期均化</div>
+                        </div>
+                        <div class="roi-compare-box">
+                            <div style="font-size: 0.72rem; color: #94A3B8;">銀行定存</div>
+                            <div style="font-size: 1.1rem; font-weight: 800; color: #94A3B8; font-family: var(--font-mono); margin: 2px 0;">+1.7%</div>
+                            <div style="font-size: 0.68rem; color: #64748B;">保守無風險</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button type="button" class="btn-export-excel" style="flex: 1;" onclick="exportSingleExcel('roi-analysis')">
+                             下載【買房獲利精算單 (Excel)】
+                        </button>
+                        <button type="button" style="flex: 1; background: linear-gradient(135deg, #06C755 0%, #05a044 100%); border: none; color: #FFFFFF; font-weight: 800; font-size: 0.84rem; padding: 10px 14px; border-radius: var(--radius-xs); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);" onclick="copyShareSummary('roi-analysis')">
+                             一鍵複製 LINE 獲利決策
+                        </button>
+                    </div>
+                    <button type="button" class="btn-print-statement" onclick="window.print()">
+                        列印本頁分析水單
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             三大利他決策智庫：最佳脫手年限 ＆ 策略 PK ＆ 同預算同級標的
+             ========================================================================== -->
+        <div class="strategy-suite-section">
+            <!-- 1. AI 最佳脫手年份獲利光譜 -->
+            <div class="strategy-suite-header">
+                <div class="strategy-suite-title">
+                    【AI 最佳脫手年限獲利光譜】 1~10 年持有期損益極大化沙盤推演
+                </div>
+                <div class="strategy-suite-sub">
+                    自動精算各年份「房地合一稅階跳降」與「租金複利累積」，一鍵定位黃金脫手甜蜜點（Sweetspot）
+                </div>
+            </div>
+            <div class="sweetspot-grid" id="sweetspotGridContainer">
+                <!-- 動態由 JS 渲染各年份獲利卡片 -->
+            </div>
+
+            <!-- 2. 三大操作策略 PK 矩陣 -->
+            <div class="strategy-suite-header" style="margin-top: 36px;">
+                <div class="strategy-suite-title">
+                    【三大操作策略沙盤推演 PK 天秤】 同一棟房子，哪種模式讓您賺最多？
+                </div>
+                <div class="strategy-suite-sub">
+                    橫向精算「以租養房」、「設籍自住 400 萬免稅」與「以小換大重購退稅」之財務效益與操作門檻
+                </div>
+            </div>
+            <div class="strategy-pk-grid" id="strategyPkContainer">
+                <!-- 動態由 JS 渲染三大策略卡片 -->
+            </div>
+
+            <!-- 3. 同預算同級標的橫向比較智庫 -->
+            <div class="strategy-suite-header" style="margin-top: 36px;">
+                <div class="strategy-suite-title" id="peerBudgetHeaderTitle">
+                    【同預算置產橫向 PK 智庫】 同樣 2,200 萬預算，哪種產品型態最適合您？
+                </div>
+                <div class="strategy-suite-sub">
+                    多維度評估成熟都會大樓、新興重劃區新屋與收租透天/公寓之現金流、增值力與轉手流通性
+                </div>
+            </div>
+            <div class="peer-property-grid" id="peerPropertyContainer">
+            <!-- Google AdSense 合規自適應展示廣告單元 (Better Ads Standards Compliant) -->
+            <div class="ad-container-wrapper" style="margin: 32px auto 10px; text-align: center; max-width: 980px; background: rgba(11, 19, 43, 0.45); border: 1px dashed rgba(223, 192, 122, 0.3); border-radius: var(--radius-sm); padding: 14px 10px;">
+                <!-- Google AdSense 手動廣告單元插槽 (已通過官方審核，取得專屬 10 位數 data-ad-slot 後解除註解啟用)
+        <div style="font-size: 0.7rem; color: #94A3B8; letter-spacing: 1px; margin-bottom: 8px;">— 贊助商廣告 ‧ SPONSORED —</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1157627714001948"
+                     data-ad-slot="auto"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+        -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部版權宣告與免責條款 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="index.html">全台房價估價</a>
+                <a href="roi.html">置產獲利精算</a>
+                <a href="tax.html">房地合一2.0</a>
+                <a href="notes.html">代書實務筆記 ＆ QA</a>
+                <a href="about.html">關於我們 ＆ 顧問團隊</a>
+                <a href="about.html#disclaimer">免責聲明</a>
+                <a href="privacy.html">隱私權政策 ＆ Cookie 宣告</a>
+            </div>
+            <p style="margin-bottom: 8px;">© <span id="currentYearFooter"></span> VANDORA ‧ 開拓 ‧ 落地 ‧ 富饒 ｜ 全國不動產稅務與建築土地全能精算系統</p>
+            <p style="font-size: 0.76rem; color: var(--c-text-dim);">免責聲明：本系統各項實價登錄行情與試算結果均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/taiwan_districts_data.js?v=2026.W40"></script>
+    <script src="js/calculator.js?v=2026.W40"></script>
+    <script>
+        document.getElementById('currentYearFooter').innerText = new Date().getFullYear();
+
+        // 解析 URL query 參數以接收從 index.html 帶過來的數據
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof updateRoiDistricts === 'function') updateRoiDistricts();
+            
+            const params = new URLSearchParams(window.location.search);
+            const p = params.get('price');
+            const city = params.get('city');
+            const dist = params.get('dist');
+            const rent = params.get('rent');
+
+            if (p) setRoiVal('roi_buy_price', parseFloat(p));
+            if (city) {
+                const cityEl = document.getElementById('roi_city');
+                if (cityEl) {
+                    cityEl.value = city;
+                    updateRoiDistricts();
+                }
+            }
+            if (dist) {
+                const distEl = document.getElementById('roi_dist');
+                if (distEl) distEl.value = dist;
+            }
+            if (rent) setRoiVal('roi_monthly_rent', parseFloat(rent));
+
+            if (typeof updateRoiDistrictGrowth === 'function') updateRoiDistrictGrowth();
+            if (typeof calcRoiAnalysis === 'function') calcRoiAnalysis();
+        });
+    </script>
+
+    <!-- 贊助支持彈窗 (Sponsor Modal ‧ 尊榮賦能版) -->
+    <!-- 贊助支持彈窗 Modal (純公益隨喜請喝咖啡 ‧ 零客服負擔 ‧ 全功能直接免費使用) -->
+ <div id="sponsorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
+     <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 480px; width: 92%; text-align: center; box-shadow: var(--shadow-elevated);">
+         <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--c-brass-muted); color: var(--c-brass-light); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 14px; border: 1px solid var(--c-brass-border);">
+             ☕
+         </div>
+         <h3 style="color: #FFFFFF; font-size: 1.35rem; font-weight: 800; font-family: var(--font-serif); margin-bottom: 6px;">請開發與維運團隊喝杯咖啡</h3>
+         <p style="color: var(--c-text-muted); font-size: 0.84rem; margin-bottom: 14px; line-height: 1.6;">
+             VANDORA 堅持<strong>全功能 100% 免費開放、無付費牆、免註冊登入</strong>。本站所有 Excel 旗艦精算報告、簽約水單與法規工具皆可在瀏覽器直接免費一鍵匯出！
+         </p>
+
+         <!-- 隨喜利他理念說明卡 -->
+         <div style="background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 0.82rem; line-height: 1.6; color: #E2E8F0; margin-bottom: 16px;">
+             <strong style="color: #DFC07A; display: block; margin-bottom: 4px;">🌿 隨喜支持 ‧ 讓專業工具持續開源維運：</strong>
+             若本工具在您買賣房屋、地政簽約、資產傳承或申報房產稅時，為您避開了法規地雷、精準省下了數萬元的代書費與重稅，歡迎自由隨喜請工程團隊喝杯咖啡（NT$ 50 ~ 200 元隨喜），支持雲端爬蟲伺服器每週自動同步內政部開放資料之頻寬維護！
+         </div>
+
+         <!-- 銀行帳戶與多元轉帳 -->
+         <div style="background: #0A0D10; border: 1px solid var(--c-border-subtle); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; text-align: left;">
+             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                 <span style="font-size: 0.78rem; color: var(--c-text-dim);">國泰世華商業銀行 (代碼 013) ｜ 戶名：胡女士</span>
+                 <span style="font-size: 0.72rem; color: #34D399; background: rgba(52, 211, 153, 0.15); padding: 1px 6px; border-radius: 4px;">支援各大網銀/ATM</span>
+             </div>
+
+ <!-- Cookie 告知橫幅 (Cookie Consent Banner) -->
+ <div id="cookieBanner" class="cookie-consent-banner" style="display: none;">
+ <div class="cookie-consent-text">
+ <strong>Cookie 與第三方廣告服務告知：</strong>本網站使用 Cookie 與 Google AdSense 技術以確保系統穩定運作、評估流量與提供相關內容。繼續瀏覽即代表您同意本站之 Cookie 應用政策。
+ </div>
+ <div class="cookie-consent-actions">
+ <button type="button" class="btn-cookie-privacy" onclick="openPrivacyModal()">隱私權條款</button>
+ <button type="button" class="btn-cookie-accept" onclick="acceptCookieConsent()">同意並接受</button>
+ </div>
+ </div>
+
+ <!-- 隱私權政策與 Cookie 條款彈窗 Modal (Google AdSense 審核必備) -->
+ <div id="privacyModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
+ <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 640px; width: 92%; text-align: left; box-shadow: var(--shadow-elevated);">
+ <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--c-border-hairline); padding-bottom: 14px;">
+ <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 800; font-family: var(--font-serif); margin: 0; display: flex; align-items: center; gap: 8px;">
+ 隱私權政策 ＆ Cookie 使用聲明
+ </h3>
+ <button type="button" onclick="closePrivacyModal()" style="background: none; border: none; color: #94A3B8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+ </div>
+ 
+ <div class="privacy-body-scroll">
+ <h4>一、個人資料保護原則</h4>
+ <p>本系統（VANDORA）尊重並保護每位使用者的隱私。所有房屋市值試算、土地行情與地政稅務精算均在使用者瀏覽器端本機即時運算完成，本站不會主動儲存或對外洩漏您的資產數據。</p>
+
+ <h4>二、Google AdSense 廣告與第三方 Cookie 宣告</h4>
+ <p>本網站使用 Google AdSense 廣告發布商服務（發布商 ID：<code>ca-pub-1157627714001948</code>）。Google 作為第三方廣告供應商，會使用 Cookie（包括 DoubleClick DART Cookie）根據您造訪本網站及其他網站的歷史紀錄投放相關廣告。</p>
+ <ul>
+ <li>使用者得隨時造訪 <a href="https://www.google.com/settings/ads" target="_blank" style="color: #60A5FA;">Google 廣告設定</a> 停用個人化廣告。</li>
+ <li>若您不希望第三方供應商使用 Cookie 投放廣告，亦可前往 <a href="https://www.aboutads.info" target="_blank" style="color: #60A5FA;">AboutAds.info</a> 退出。</li>
+ </ul>
+
+ <h4>三、網站流量分析與效能優化</h4>
+ <p>本站可能透過匿名化分析技術記錄造訪次數、熱門功能與停留時間，以持續優化全能地政試算工具之運算效能。</p>
+
+ <h4>四、免責聲明</h4>
+ <p>本系統各項實價登錄行情與稅務試算均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
+ </div>
+
+ <div style="text-align: right;">
+ <button type="button" onclick="closePrivacyModal()" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; font-weight: 800; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer;">
+ 我已充分了解並關閉
+ </button>
+ </div>
+ </div>
+ </div>
+
+
+             <div style="color: var(--c-brass-light); font-weight: 800; font-size: 1.15rem; letter-spacing: 1px; font-family: var(--font-mono); margin-bottom: 6px;">
+                 帳號：007506098097
+             </div>
+             <div style="font-size: 0.74rem; color: #94A3B8; line-height: 1.5;">
+                 💡 跨行轉帳小撇步：使用 <strong>街口支付 / 台灣 Pay / LINE Pay / 各家網銀</strong> 通常享有每月跨行免手續費優惠！
+             </div>
+         </div>
+
+         <!-- 操作按鈕群 (零維護、零承諾負擔) -->
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
+             <button type="button" onclick="copySponsorAccount()" style="background: linear-gradient(135deg, #C5A059 0%, #A88134 100%); color: #0A0D10; font-weight: 800; font-size: 0.84rem; border: none; padding: 11px; border-radius: 6px; cursor: pointer;">
+                 複製帳號 (00750...)
+             </button>
+             <button type="button" onclick="copySponsorBankCode()" style="background: rgba(197, 160, 89, 0.2); border: 1px solid var(--c-brass-gold); color: #DFC07A; font-weight: 800; font-size: 0.84rem; padding: 11px; border-radius: 6px; cursor: pointer;">
+                 複製銀行代碼 (013)
+             </button>
+         </div>
+         <button type="button" onclick="closeSponsorModal()" style="width: 100%; background: var(--c-bg-surface-elevated); color: #94A3B8; font-weight: 600; font-size: 0.82rem; border: 1px solid var(--c-border-subtle); padding: 9px; border-radius: 6px; cursor: pointer;">
+             關閉視窗
+         </button>
+     </div>
+ </div>
+
+</body>
+</html>
