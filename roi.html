@@ -606,101 +606,106 @@
         });
     </script>
 
-    <!-- 贊助支持彈窗 (Sponsor Modal ‧ 尊榮賦能版) -->
-    <!-- 贊助支持彈窗 Modal (純公益隨喜請喝咖啡 ‧ 零客服負擔 ‧ 全功能直接免費使用) -->
- <div id="sponsorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
-     <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 480px; width: 92%; text-align: center; box-shadow: var(--shadow-elevated);">
-         <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--c-brass-muted); color: var(--c-brass-light); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 14px; border: 1px solid var(--c-brass-border);">
-             ☕
-         </div>
-         <h3 style="color: #FFFFFF; font-size: 1.35rem; font-weight: 800; font-family: var(--font-serif); margin-bottom: 6px;">請開發與維運團隊喝杯咖啡</h3>
-         <p style="color: var(--c-text-muted); font-size: 0.84rem; margin-bottom: 14px; line-height: 1.6;">
-             VANDORA 堅持<strong>全功能 100% 免費開放、無付費牆、免註冊登入</strong>。本站所有 Excel 旗艦精算報告、簽約水單與法規工具皆可在瀏覽器直接免費一鍵匯出！
-         </p>
+    <!-- 贊助支持彈窗 Modal (純自願隨喜請喝咖啡 ‧ 零法律糾紛 ‧ 零客服負擔 ‧ 全功能直接免費使用) -->
+<div id="sponsorModal" onclick="if(event.target===this)closeSponsorModal()" style="display: none; position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.82); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(8px); padding: 16px; box-sizing: border-box; overflow-y: auto;">
+    <div style="position: relative; background: #11161B; border: 1px solid var(--c-brass-border, #C5A059); border-radius: 16px; padding: 26px 22px 20px; max-width: 480px; width: 100%; max-height: calc(100vh - 40px); overflow-y: auto; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.8); box-sizing: border-box;">
+        
+        <!-- 右上角極明顯關閉按鈕 -->
+        <button type="button" onclick="closeSponsorModal()" style="position: absolute; top: 12px; right: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); color: #FFFFFF; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" title="關閉視窗 (ESC)" aria-label="關閉視窗">✕</button>
 
-         <!-- 隨喜利他理念說明卡 -->
-         <div style="background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 0.82rem; line-height: 1.6; color: #E2E8F0; margin-bottom: 16px;">
-             <strong style="color: #DFC07A; display: block; margin-bottom: 4px;">🌿 隨喜支持 ‧ 讓專業工具持續開源維運：</strong>
-             若本工具在您買賣房屋、地政簽約、資產傳承或申報房產稅時，為您避開了法規地雷、精準省下了數萬元的代書費與重稅，歡迎自由隨喜請工程團隊喝杯咖啡（NT$ 50 ~ 200 元隨喜），支持雲端爬蟲伺服器每週自動同步內政部開放資料之頻寬維護！
-         </div>
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--c-brass-muted, rgba(197, 160, 89, 0.15)); color: var(--c-brass-light, #DFC07A); display: flex; align-items: center; justify-content: center; font-size: 1.45rem; margin: 0 auto 10px; border: 1px solid var(--c-brass-border, #C5A059);">
+            ☕
+        </div>
+        <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 800; font-family: var(--font-serif); margin-bottom: 5px;">請開發與維運團隊喝杯咖啡</h3>
+        <p style="color: var(--c-text-muted, #94A3B8); font-size: 0.82rem; margin-bottom: 10px; line-height: 1.5;">
+            VANDORA 堅持<strong>全功能 100% 開放免費使用、無付費牆、免註冊登入</strong>。所有 Excel 旗艦試算報告、簽約水單與法規精算皆可在瀏覽器直接免費一鍵匯出！
+        </p>
 
-         <!-- 銀行帳戶與多元轉帳 -->
-         <div style="background: #0A0D10; border: 1px solid var(--c-border-subtle); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; text-align: left;">
-             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                 <span style="font-size: 0.78rem; color: var(--c-text-dim);">國泰世華商業銀行 (代碼 013) ｜ 戶名：胡女士</span>
-                 <span style="font-size: 0.72rem; color: #34D399; background: rgba(52, 211, 153, 0.15); padding: 1px 6px; border-radius: 4px;">支援各大網銀/ATM</span>
-             </div>
+        <!-- 隨喜利他理念說明卡 -->
+        <div style="background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 8px; padding: 9px 12px; text-align: left; font-size: 0.78rem; line-height: 1.5; color: #E2E8F0; margin-bottom: 10px;">
+            <strong style="color: #DFC07A; display: block; margin-bottom: 2px;">🌿 隨喜支持 ‧ 讓專業工具持續開源運作：</strong>
+            若本工具在您買賣房屋、地政簽約、資產傳承或申報房產稅時，為您避開了法規地雷、精準省下了數萬元的代書費與重稅，歡迎自由隨喜請工程團隊喝杯咖啡（NT$ 50 ~ 200 元隨喜），補貼每週自動同步內政部開放資料之雲端伺服器頻寬！
+        </div>
 
- <!-- Cookie 告知橫幅 (Cookie Consent Banner) -->
- <div id="cookieBanner" class="cookie-consent-banner" style="display: none;">
- <div class="cookie-consent-text">
- <strong>Cookie 與第三方廣告服務告知：</strong>本網站使用 Cookie 與 Google AdSense 技術以確保系統穩定運作、評估流量與提供相關內容。繼續瀏覽即代表您同意本站之 Cookie 應用政策。
- </div>
- <div class="cookie-consent-actions">
- <button type="button" class="btn-cookie-privacy" onclick="openPrivacyModal()">隱私權條款</button>
- <button type="button" class="btn-cookie-accept" onclick="acceptCookieConsent()">同意並接受</button>
- </div>
- </div>
+        <!-- 銀行帳戶與多元轉帳 -->
+        <div style="background: #0A0D10; border: 1px solid var(--c-border-subtle, rgba(255,255,255,0.1)); border-radius: 10px; padding: 11px 13px; margin-bottom: 10px; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
+                <span style="font-size: 0.76rem; color: var(--c-text-dim, #94A3B8);">國泰世華商業銀行 (代碼 013) ｜ 戶名：胡女士</span>
+                <span style="font-size: 0.7rem; color: #34D399; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px;">支援各大網銀/ATM</span>
+            </div>
+            <div style="font-size: 1.2rem; font-weight: 800; color: #DFC07A; font-family: monospace; letter-spacing: 1.5px; margin-bottom: 3px;">
+                帳號：007506098097
+            </div>
+            <div style="font-size: 0.7rem; color: var(--c-text-dim, #64748B); line-height: 1.35;">
+                💡 跨行轉帳小撇步：使用 街口支付 / 台灣 Pay / LINE Pay / 各家網銀 通常享有每月跨行免手續費優惠！
+            </div>
+        </div>
 
- <!-- 隱私權政策與 Cookie 條款彈窗 Modal (Google AdSense 審核必備) -->
- <div id="privacyModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
- <div style="background: #11161B; border: 1px solid var(--c-brass-border); border-radius: 16px; padding: 32px 28px; max-width: 640px; width: 92%; text-align: left; box-shadow: var(--shadow-elevated);">
- <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--c-border-hairline); padding-bottom: 14px;">
- <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 800; font-family: var(--font-serif); margin: 0; display: flex; align-items: center; gap: 8px;">
- 隱私權政策 ＆ Cookie 使用聲明
- </h3>
- <button type="button" onclick="closePrivacyModal()" style="background: none; border: none; color: #94A3B8; font-size: 1.4rem; cursor: pointer;">&times;</button>
- </div>
- 
- <div class="privacy-body-scroll">
- <h4>一、個人資料保護原則</h4>
- <p>本系統（VANDORA）尊重並保護每位使用者的隱私。所有房屋市值試算、土地行情與地政稅務精算均在使用者瀏覽器端本機即時運算完成，本站不會主動儲存或對外洩漏您的資產數據。</p>
+        <div style="font-size: 0.68rem; color: #64748B; line-height: 1.4; margin-bottom: 12px; text-align: justify; background: rgba(0,0,0,0.25); padding: 7px 9px; border-radius: 6px; border: 1px dashed rgba(255,255,255,0.08);">
+            ⚖️ 【無償隨喜贊助聲明】：本贊助純屬自願性無償請喝咖啡性質（民法第 406條無償贈與），無任何商品販售、無實體或數位禮包、無人工對帳或後續寄送義務。本站全功能永久免費，不贊助亦可 100% 自由使用與匯出報告，絕無任何強制或對價關係。感謝您的認同與暖心鼓勵！
+        </div>
 
- <h4>二、Google AdSense 廣告與第三方 Cookie 宣告</h4>
- <p>本網站使用 Google AdSense 廣告發布商服務（發布商 ID：<code>ca-pub-1157627714001948</code>）。Google 作為第三方廣告供應商，會使用 Cookie（包括 DoubleClick DART Cookie）根據您造訪本網站及其他網站的歷史紀錄投放相關廣告。</p>
- <ul>
- <li>使用者得隨時造訪 <a href="https://www.google.com/settings/ads" target="_blank" style="color: #60A5FA;">Google 廣告設定</a> 停用個人化廣告。</li>
- <li>若您不希望第三方供應商使用 Cookie 投放廣告，亦可前往 <a href="https://www.aboutads.info" target="_blank" style="color: #60A5FA;">AboutAds.info</a> 退出。</li>
- </ul>
+        <!-- 複製按鈕組 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px;">
+            <button type="button" onclick="copySponsorAccount()" style="background: var(--c-brass-gold, #C5A059); color: #0A0D10; font-weight: 800; font-size: 0.8rem; border: none; padding: 9px; border-radius: 6px; cursor: pointer;">
+                複製帳號 (00750...)
+            </button>
+            <button type="button" onclick="copySponsorBankCode()" style="background: rgba(197, 160, 89, 0.2); border: 1px solid var(--c-brass-gold, #C5A059); color: #DFC07A; font-weight: 800; font-size: 0.8rem; padding: 9px; border-radius: 6px; cursor: pointer;">
+                複製銀行代碼 (013)
+            </button>
+        </div>
+        <button type="button" onclick="closeSponsorModal()" style="width: 100%; background: rgba(255,255,255,0.07); color: #E2E8F0; font-weight: 700; font-size: 0.84rem; border: 1px solid rgba(255,255,255,0.18); padding: 8px; border-radius: 6px; cursor: pointer;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">
+            關閉視窗 (ESC)
+        </button>
+    </div>
+</div>
 
- <h4>三、網站流量分析與效能優化</h4>
- <p>本站可能透過匿名化分析技術記錄造訪次數、熱門功能與停留時間，以持續優化全能地政試算工具之運算效能。</p>
+<!-- Cookie 告知橫幅 (Cookie Consent Banner) -->
+<div id="cookieBanner" class="cookie-consent-banner" style="display: none;">
+    <div class="cookie-consent-text">
+        <strong>Cookie 與第三方廣告服務告知：</strong>本網站使用 Cookie 與 Google AdSense 技術以確保系統穩定運作、評估流量與提供相關內容。繼續瀏覽即代表您同意本站之 Cookie 應用政策。
+    </div>
+    <div class="cookie-consent-actions">
+        <button type="button" class="btn-cookie-privacy" onclick="openPrivacyModal()">隱私權條款</button>
+        <button type="button" class="btn-cookie-accept" onclick="acceptCookieConsent()">同意並接受</button>
+    </div>
+</div>
 
- <h4>四、免責聲明</h4>
- <p>本系統各項實價登錄行情與稅務試算均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
- </div>
+<!-- 隱私權政策與 Cookie 條款彈窗 Modal (Google AdSense 審核必備) -->
+<div id="privacyModal" onclick="if(event.target===this)closePrivacyModal()" style="display: none; position: fixed; inset: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(10px); padding: 16px; box-sizing: border-box; overflow-y: auto;">
+    <div style="position: relative; background: #11161B; border: 1px solid var(--c-brass-border, #C5A059); border-radius: 16px; padding: 28px 24px; max-width: 640px; width: 100%; max-height: calc(100vh - 40px); overflow-y: auto; text-align: left; box-shadow: 0 20px 50px rgba(0,0,0,0.8); box-sizing: border-box;">
+        <button type="button" onclick="closePrivacyModal()" style="position: absolute; top: 14px; right: 14px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); color: #FFFFFF; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" title="關閉視窗 (ESC)" aria-label="關閉視窗">✕</button>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--c-border-hairline, rgba(255,255,255,0.1)); padding-bottom: 14px; margin-bottom: 14px;">
+            <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 800; font-family: var(--font-serif); margin: 0; display: flex; align-items: center; gap: 8px;">
+                隱私權政策 ＆ Cookie 使用聲明
+            </h3>
+        </div>
+        
+        <div class="privacy-body-scroll" style="color: #CBD5E1; font-size: 0.85rem; line-height: 1.6;">
+            <h4 style="color: #DFC07A; margin-top: 10px; margin-bottom: 4px;">一、個人資料保護原則</h4>
+            <p>本系統（VANDORA）尊重並保護每位使用者的隱私。所有房屋市值試算、土地行情與地政稅務精算均在使用者瀏覽器端本機即時運算完成，本站不會主動儲存或對外洩漏您的資產數據。</p>
 
- <div style="text-align: right;">
- <button type="button" onclick="closePrivacyModal()" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; font-weight: 800; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer;">
- 我已充分了解並關閉
- </button>
- </div>
- </div>
- </div>
+            <h4 style="color: #DFC07A; margin-top: 12px; margin-bottom: 4px;">二、Google AdSense 廣告與第三方 Cookie 宣告</h4>
+            <p>本網站使用 Google AdSense 廣告發布商服務（發布商 ID：<code>ca-pub-1157627714001948</code>）。Google 作為第三方廣告供應商，會使用 Cookie（包括 DoubleClick DART Cookie）根據您造訪本網站及其他網站的歷史紀錄投放相關廣告。</p>
+            <ul style="padding-left: 20px; margin-top: 4px;">
+                <li>使用者得隨時造訪 <a href="https://www.google.com/settings/ads" target="_blank" style="color: #60A5FA;">Google 廣告設定</a> 停用個人化廣告。</li>
+                <li>若您不希望第三方供應商使用 Cookie 投放廣告，亦可前往 <a href="https://www.aboutads.info" target="_blank" style="color: #60A5FA;">AboutAds.info</a> 退出。</li>
+            </ul>
+
+            <h4 style="color: #DFC07A; margin-top: 12px; margin-bottom: 4px;">三、網站流量分析與效能優化</h4>
+            <p>本站可能透過匿名化分析技術記錄造訪次數、熱門功能與停留時間，以持續優化全能地政試算工具之運算效能。</p>
+
+            <h4 style="color: #DFC07A; margin-top: 12px; margin-bottom: 4px;">四、免責聲明</h4>
+            <p>本系統各項實價登錄行情與稅務試算均依內政部公開數據與常規估價演算法推算，實際成交價格與課稅稅額請以買賣雙方契約及主管機關正式核定為準。</p>
+        </div>
+
+        <div style="text-align: right; margin-top: 16px;">
+            <button type="button" onclick="closePrivacyModal()" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D35 100%); color: #0A0D10; font-weight: 800; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer;">
+                我已充分了解並關閉
+            </button>
+        </div>
+    </div>
+</div>
 
 
-             <div style="color: var(--c-brass-light); font-weight: 800; font-size: 1.15rem; letter-spacing: 1px; font-family: var(--font-mono); margin-bottom: 6px;">
-                 帳號：007506098097
-             </div>
-             <div style="font-size: 0.74rem; color: #94A3B8; line-height: 1.5;">
-                 💡 跨行轉帳小撇步：使用 <strong>街口支付 / 台灣 Pay / LINE Pay / 各家網銀</strong> 通常享有每月跨行免手續費優惠！
-             </div>
-         </div>
 
-         <!-- 操作按鈕群 (零維護、零承諾負擔) -->
-         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
-             <button type="button" onclick="copySponsorAccount()" style="background: linear-gradient(135deg, #C5A059 0%, #A88134 100%); color: #0A0D10; font-weight: 800; font-size: 0.84rem; border: none; padding: 11px; border-radius: 6px; cursor: pointer;">
-                 複製帳號 (00750...)
-             </button>
-             <button type="button" onclick="copySponsorBankCode()" style="background: rgba(197, 160, 89, 0.2); border: 1px solid var(--c-brass-gold); color: #DFC07A; font-weight: 800; font-size: 0.84rem; padding: 11px; border-radius: 6px; cursor: pointer;">
-                 複製銀行代碼 (013)
-             </button>
-         </div>
-         <button type="button" onclick="closeSponsorModal()" style="width: 100%; background: var(--c-bg-surface-elevated); color: #94A3B8; font-weight: 600; font-size: 0.82rem; border: 1px solid var(--c-border-subtle); padding: 9px; border-radius: 6px; cursor: pointer;">
-             關閉視窗
-         </button>
-     </div>
- </div>
-
-</body>
-</html>
